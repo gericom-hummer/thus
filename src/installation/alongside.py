@@ -382,14 +382,25 @@ class InstallationAlongside(Gtk.Box):
         # first, shrink filesystem
         res = fs.resize(partition_path, fs_type, new_size)
         if res:
+            print("Filesystem on " + partition_path + " shrunk.\nWill recreate partition now on device " + device_path + " partition " + partition_path)
             # destroy original partition and create a new resized one
-            pm.split_partition(device_path, partition_path, new_size)
+            res = pm.split_partition(device_path, partition_path, new_size)
         else:
             txt = _("Can't shrink %s(%s) filesystem") % (otherOS, fs_type)
             logging.error(txt)
             show.error(txt)
             return
 
+        if res:
+            print("Partition " + partition_path + " shrink complete.")
+        else:
+            txt = _("Can't shrink %s(%s) partition") % (otherOS, fs_type)
+            logging.error(txt)
+            show.error(txt)
+            print("*** FILESYSTEM IN UNSAFE STATE ***\nFilesystem shrink succeeded but partition shrink failed.")
+            return
+
+        print("NOT IMPLEMENTED YET: perform installation")
         '''
         # Prepare info for installer_process
         mount_devices = {}

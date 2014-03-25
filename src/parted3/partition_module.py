@@ -103,6 +103,7 @@ def get_devices():
             try:
                 diskob = parted.Disk(dev)
                 result = OK
+                logging.info(_("Adding %s to disk_dic") % dev.path)
             except parted.DiskLabelException as err:
                 logging.warning(_('Unrecognised disk label in device %s.') % dev.path)
                 diskob = None
@@ -350,7 +351,12 @@ def split_partition(device_path, partition_path, new_size_in_mb):
         ALERT: The filesystem must be resized before trying this! """
 
     disk_dic = get_devices()
-    disk = disk_dic[device_path]
+    disk = disk_dic[device_path][0]
+
+    #disk_dic returns a tuple (diskob, result)
+    if disk_dic[device_path][1] != OK:
+        print("Cannot split an invalid partition. Bailing out.")
+        return False
 
     part_dic = get_partitions(disk)
     part = part_dic[partition_path]
@@ -364,13 +370,13 @@ def split_partition(device_path, partition_path, new_size_in_mb):
     # ok, partition deleted. Now we must create a new partition with
     # the new size
 
-    sec_size = disk.sectorSize
+    sec_size = disk.device.sectorSize
     logging.debug("Sec size: %d", sec_size)
 
     # Get old info
     units = 1000000
     start_sector = part.geometry.start
-    old_end_sector = part.gemotry.end
+    old_end_sector = part.geometry.end
     old_length = part.geometry.length
     old_size_in_mb =  old_length * sec_size / units
 
@@ -390,6 +396,8 @@ def split_partition(device_path, partition_path, new_size_in_mb):
     create_partition(disk, 0, my_geometry)
 
     finalize_changes(disk)
+
+    return True
 
 # ----------------------------------------------------------------------------
 # Usage example
