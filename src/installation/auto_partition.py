@@ -6,6 +6,7 @@
 #  This file was forked from Cnchi (graphical installer from Antergos)
 #  Check it at https://github.com/antergos
 #
+#  Copyright 2014 Netrunner (http://netrunner-os.com)
 #  Copyright 2013 Antergos (http://antergos.com/)
 #  Copyright 2013 Manjaro (http://manjaro.org)
 #
@@ -121,10 +122,10 @@ def unmount_all(dest_dir):
 
     # Close LUKS devices (they may have been left open because of a previous failed installation)
     try:
-        if os.path.exists("/dev/mapper/cryptManjaro"):
-            subprocess.check_call(["cryptsetup", "luksClose", "/dev/mapper/cryptManjaro"])
-        if os.path.exists("/dev/mapper/cryptManjaroHome"):
-            subprocess.check_call(["cryptsetup", "luksClose", "/dev/mapper/cryptManjaroHome"])
+        if os.path.exists("/dev/mapper/cryptNetrunner"):
+            subprocess.check_call(["cryptsetup", "luksClose", "/dev/mapper/cryptNetrunner"])
+        if os.path.exists("/dev/mapper/cryptNetrunnerHome"):
+            subprocess.check_call(["cryptsetup", "luksClose", "/dev/mapper/cryptNetrunnerHome"])
     except subprocess.CalledProcessError as err:
         logging.warning(_("Can't close LUKS devices (see below)"))
         logging.warning(err)
@@ -270,19 +271,19 @@ class AutoPartition(object):
         if self.luks:
             # Set luks and root
             luks = [root]
-            root = "/dev/mapper/cryptManjaro"
+            root = "/dev/mapper/cryptNetrunner"
             if self.home and not self.lvm:
                 # We'll have two LUKS devices, when we
                 # use a separate /home volume but no LVM.
                 luks.append(home)
-                home = "/dev/mapper/cryptManjaroHome"
+                home = "/dev/mapper/cryptNetrunnerHome"
 
         if self.lvm:
             lvm = root
-            swap = "/dev/ManjaroVG/ManjaroSwap"
-            root = "/dev/ManjaroVG/ManjaroRoot"
+            swap = "/dev/NetrunnerVG/NetrunnerSwap"
+            root = "/dev/NetrunnerVG/NetrunnerRoot"
             if self.home:
-                home = "/dev/ManjaroVG/ManjaroHome"
+                home = "/dev/NetrunnerVG/NetrunnerHome"
 
         return (efi, boot, swap, root, luks, lvm, home)
 
@@ -502,24 +503,24 @@ class AutoPartition(object):
                 % (gpt_bios_grub_part_size, device)], shell=True)
             subprocess.check_call(['sgdisk --set-alignment="2048" --new=2:0:+%dM --typecode=2:EF00 --change-name=2:UEFI_SYSTEM %s'
                 % (uefisys_part_size, device)], shell=True)
-            subprocess.check_call(['sgdisk --set-alignment="2048" --new=3:0:+%dM --typecode=3:8300 --attributes=3:set:2 --change-name=3:MANJARO_BOOT %s'
+            subprocess.check_call(['sgdisk --set-alignment="2048" --new=3:0:+%dM --typecode=3:8300 --attributes=3:set:2 --change-name=3:NETRUNNER_BOOT %s'
                 % (part_sizes['boot'], device)], shell=True)
 
             if self.lvm:
-                subprocess.check_call(['sgdisk --set-alignment="2048" --new=4:0:+%dM --typecode=4:8E00 --change-name=4:MANJARO_LVM %s'
+                subprocess.check_call(['sgdisk --set-alignment="2048" --new=4:0:+%dM --typecode=4:8E00 --change-name=4:NETRUNNER_LVM %s'
                     % (part_sizes['lvm_pv'], device)], shell=True)
             else:
-                subprocess.check_call(['sgdisk --set-alignment="2048" --new=4:0:+%dM --typecode=4:8300 --change-name=4:MANJARO_ROOT %s'
+                subprocess.check_call(['sgdisk --set-alignment="2048" --new=4:0:+%dM --typecode=4:8300 --change-name=4:NETRUNNER_ROOT %s'
                     % (part_sizes['root'], device)], shell=True)
 
                 if self.home:
-                    subprocess.check_call(['sgdisk --set-alignment="2048" --new=5:0:+%dM --typecode=5:8300 --change-name=5:MANJARO_HOME %s'
+                    subprocess.check_call(['sgdisk --set-alignment="2048" --new=5:0:+%dM --typecode=5:8300 --change-name=5:NETRUNNER_HOME %s'
                         % (part_sizes['home'], device)], shell=True)
 
-                    subprocess.check_call(['sgdisk --set-alignment="2048" --new=6:0:+%dM --typecode=6:8200 --change-name=6:MANJARO_SWAP %s'
+                    subprocess.check_call(['sgdisk --set-alignment="2048" --new=6:0:+%dM --typecode=6:8200 --change-name=6:NETRUNNER_SWAP %s'
                     % (part_sizes['swap'], device)], shell=True)
                 else:
-                    subprocess.check_call(['sgdisk --set-alignment="2048" --new=5:0:+%dM --typecode=5:8200 --change-name=5:MANJARO_SWAP %s'
+                    subprocess.check_call(['sgdisk --set-alignment="2048" --new=5:0:+%dM --typecode=5:8200 --change-name=5:NETRUNNER_SWAP %s'
                     % (part_sizes['swap'], device)], shell=True)
 
             logging.debug(check_output("sgdisk --print %s" % device))
@@ -593,24 +594,24 @@ class AutoPartition(object):
             logging.debug("Boot %s, Swap %s, Root %s, Home %s", boot_device, swap_device, root_device, home_device)
 
         if self.luks:
-            self.setup_luks(luks_devices[0], "cryptManjaro", key_files[0])
+            self.setup_luks(luks_devices[0], "cryptNetrunner", key_files[0])
             if self.home and not self.lvm:
-                self.setup_luks(luks_devices[1], "cryptManjaroHome", key_files[1])
+                self.setup_luks(luks_devices[1], "cryptNetrunnerHome", key_files[1])
 
         if self.lvm:
             logging.debug(_("Will setup LVM on device %s"), lvm_device)
 
             subprocess.check_call(["pvcreate", "-f", "-y", lvm_device])
-            subprocess.check_call(["vgcreate", "-f", "-y", "ManjaroVG", lvm_device])
+            subprocess.check_call(["vgcreate", "-f", "-y", "NetrunnerVG", lvm_device])
 
             # Fix issue 180 (https://github.com/Antergos/Cnchi/issues/180)
             try:
                 # Check space we have now for creating logical volumes
-                vg_info = check_output("vgdisplay -c ManjaroVG")
+                vg_info = check_output("vgdisplay -c NetrunnerVG")
                 # Get column number 12: Size of volume group in kilobytes
                 vg_size = int(vg_info.split(":")[11]) / 1024
                 if part_sizes['lvm_pv'] > vg_size:
-                    logging.debug("Real ManjaroVG volume group size: %d MiB", vg_size)
+                    logging.debug("Real NetrunnerVG volume group size: %d MiB", vg_size)
                     logging.debug("Reajusting logical volume sizes")
                     diff_size = part_sizes['lvm_pv'] - vg_size
                     start_part_sizes = empty_space_size + gpt_bios_grub_part_size + uefisys_part_size
@@ -619,30 +620,29 @@ class AutoPartition(object):
             except Exception as err:
                 logging.exception(err)
             
-            subprocess.check_call(["lvcreate", "--name", "ManjaroRoot", "--size", str(int(part_sizes['root'])), "ManjaroVG"])
+            subprocess.check_call(["lvcreate", "--name", "NetrunnerRoot", "--size", str(int(part_sizes['root'])), "NetrunnerVG"])
 
             if not self.home:
                 # Use the remaining space for our swap volume
-                subprocess.check_call(["lvcreate", "--name", "ManjaroSwap", "--extents", "100%FREE", "ManjaroVG"])
+                subprocess.check_call(["lvcreate", "--name", "NetrunnerSwap", "--extents", "100%FREE", "NetrunnerVG"])
             else:
-                subprocess.check_call(["lvcreate", "--name", "ManjaroHome", "--size", str(int(part_sizes['home'])), "ManjaroVG"])
+                subprocess.check_call(["lvcreate", "--name", "NetrunnerHome", "--size", str(int(part_sizes['home'])), "NetrunnerVG"])
                 # Use the remaining space for our swap volume
-                subprocess.check_call(["lvcreate", "--name", "ManjaroSwap", "--extents", "100%FREE", "ManjaroVG"])
-
+                subprocess.check_call(["lvcreate", "--name", "NetrunnerSwap", "--extents", "100%FREE", "NetrunnerVG"])
 
         # Make sure the "root" partition is defined first!
-        self.mkfs(root_device, "ext4", "/", "ManjaroRoot")
-        self.mkfs(swap_device, "swap", "", "ManjaroSwap")
+        self.mkfs(root_device, "ext4", "/", "NetrunnerRoot")
+        self.mkfs(swap_device, "swap", "", "NetrunnerSwap")
         if self.separate_boot:
             logging.debug("Boot device is " + boot_device + ", about to mkfs")
-            self.mkfs(boot_device, "ext2", "/boot", "ManjaroBoot")
+            self.mkfs(boot_device, "ext2", "/boot", "NetrunnerBoot")
 
         # Format the EFI partition
         if self.efi:
             self.mkfs(efi_device, "vfat", "/boot/efi", "UEFI_SYSTEM", "-F 32")
 
         if self.home:
-            self.mkfs(home_device, "ext4", "/home", "ManjaroHome")
+            self.mkfs(home_device, "ext4", "/home", "NetrunnerHome")
 
         # NOTE: encrypted and/or lvm2 hooks will be added to mkinitcpio.conf in installation_process.py if necessary
         # NOTE: /etc/default/grub, /etc/stab and /etc/crypttab will be modified in installation_process.py, too.

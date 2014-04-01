@@ -9,16 +9,16 @@
 # Huei-Horng Yo <hiroshiyui@gmail.com>, 2012
 # 柏諺 黃 <s8321414@gmail.com>, 2014
 # lat1992 <lat9274@gmail.com>, 2014
-# manjarolinux <philm@manjaro.org>, 2013-2014
+# Netrunnerlinux <philm@Netrunner.org>, 2013-2014
 # 柏諺 黃 <s8321414@gmail.com>, 2013-2014
 msgid ""
 msgstr ""
-"Project-Id-Version: manjaro-thus\n"
+"Project-Id-Version: Netrunner-thus\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-06-01 10:07+0200\n"
 "PO-Revision-Date: 2014-06-02 03:51+0000\n"
 "Last-Translator: 柏諺 黃 <s8321414@gmail.com>\n"
-"Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/manjaro-thus/language/zh_TW/)\n"
+"Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/Netrunner-thus/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -47,8 +47,8 @@ msgid "Thus installer version %s"
 msgstr "Thus 安裝程式版本 %s"
 
 #: thus.py:234
-msgid "Manjaro Installer"
-msgstr "Manjaro 安裝程式"
+msgid "Netrunner Installer"
+msgstr "Netrunner 安裝程式"
 
 #: thus.py:290
 msgid "Quiting installer..."
@@ -493,8 +493,8 @@ msgstr "Thus 將不會安裝任何開機載入器"
 
 #: src/installation/advanced.py:1860
 #, python-format
-msgid "Manjaro will install the bootloader of type %s in %s"
-msgstr "Manjaro 將會安裝 %s 類型的開機載入器到 %s 上"
+msgid "Netrunner will install the bootloader of type %s in %s"
+msgstr "Netrunner 將會安裝 %s 類型的開機載入器到 %s 上"
 
 #: src/installation/advanced.py:1876 src/installation/alongside.py:512
 #: src/installation/automatic.py:247
@@ -507,12 +507,12 @@ msgid "Can't load %s css"
 msgstr "無法載入 %s css"
 
 #: src/installation/alongside.py:142
-msgid "Choose which OS you want to install Manjaro next to"
-msgstr "選擇您要將 Manjaro 與哪一個作業系統共存"
+msgid "Choose which OS you want to install Netrunner next to"
+msgstr "選擇您要將 Netrunner 與哪一個作業系統共存"
 
 #: src/installation/alongside.py:146
-msgid "Manjaro alongside another OS"
-msgstr "Manjaro 與其他作業系統共存"
+msgid "Netrunner alongside another OS"
+msgstr "Netrunner 與其他作業系統共存"
 
 #: src/installation/alongside.py:175
 msgid "Detected OS"
@@ -566,8 +566,8 @@ msgid "Installation type"
 msgstr "安裝類型"
 
 #: src/installation/ask.py:113 ui/installation_ask.ui:34
-msgid "Erase disk and install Manjaro (automatic)"
-msgstr "清除磁碟並安裝 Manjaro (自動)"
+msgid "Erase disk and install Netrunner (automatic)"
+msgstr "清除磁碟並安裝 Netrunner (自動)"
 
 #: src/installation/ask.py:116
 msgid "Warning: This will delete all data on your disk"
@@ -602,34 +602,34 @@ msgstr "將會把您的 /home 目錄設定為不同的分割區或容量。"
 
 #: src/installation/ask.py:152 src/installation/ask.py:154
 #, python-format
-msgid "Install Manjaro alongside %s"
-msgstr "與 %s 共存安裝 Manjaro"
+msgid "Install Netrunner alongside %s"
+msgstr "與 %s 共存安裝 Netrunner"
 
 #: src/installation/ask.py:161
-msgid "Manage your partitions and where to install Manjaro (advanced)"
-msgstr "自訂您的分割區並選擇您要安裝 Manjaro 的位置 （進階）"
+msgid "Manage your partitions and where to install Netrunner (advanced)"
+msgstr "自訂您的分割區並選擇您要安裝 Netrunner 的位置 （進階）"
 
 #: src/installation/ask.py:164
 msgid ""
 "You will be able to create/delete partitions, choose where to install "
-"Manjaro and also choose additional mount points."
-msgstr "您將要增加/刪除分割區，選擇您要安裝 Manjaro 的地方以及選擇額外的掛載點。"
+"Netrunner and also choose additional mount points."
+msgstr "您將要增加/刪除分割區，選擇您要安裝 Netrunner 的地方以及選擇額外的掛載點。"
 
 #: src/installation/ask.py:190
-msgid "Manjaro installation will be encrypted using LUKS"
-msgstr "Manjaro 將會使用 LUKS 加密的方式安裝"
+msgid "Netrunner installation will be encrypted using LUKS"
+msgstr "Netrunner 將會使用 LUKS 加密的方式安裝"
 
 #: src/installation/ask.py:193
-msgid "Manjaro will be installed using LVM volumes"
-msgstr "Manjaro 將會使用 LVM 卷安裝"
+msgid "Netrunner will be installed using LVM volumes"
+msgstr "Netrunner 將會使用 LVM 卷安裝"
 
 #: src/installation/ask.py:195
-msgid "Manjaro will be installed using a separate /home volume."
-msgstr "Manjaro 將會使用分離的 /home 卷來安裝。"
+msgid "Netrunner will be installed using a separate /home volume."
+msgstr "Netrunner 將會使用分離的 /home 卷來安裝。"
 
 #: src/installation/ask.py:197
-msgid "Manjaro will be installed using a separate /home partition."
-msgstr "Manjaro 將會使用分離的 /home 分割區來安裝。"
+msgid "Netrunner will be installed using a separate /home partition."
+msgstr "Netrunner 將會使用分離的 /home 分割區來安裝。"
 
 #: src/installation/automatic.py:75
 msgid "Automatic installation mode"
@@ -646,9 +646,9 @@ msgstr "警告！這個安裝模式將會覆寫您磁碟上的所有資料！"
 
 #: src/installation/automatic.py:88 ui/installation_automatic.ui:59
 msgid ""
-"Please choose the drive where you want to install Manjaro\n"
+"Please choose the drive where you want to install Netrunner\n"
 "and click the button below to start the process."
-msgstr "請選擇您要安裝 Manjaro 的裝置\n並按下面的按鈕以啟動安裝程序。"
+msgstr "請選擇您要安裝 Netrunner 的裝置\n並按下面的按鈕以啟動安裝程序。"
 
 #: src/installation/automatic.py:93 ui/installation_automatic.ui:176
 msgid "Encryption Password:"
@@ -865,8 +865,8 @@ msgstr "已加入 crypttab : %s"
 
 #: src/installation/process.py:764
 #, python-format
-msgid "Added to fstab : /dev/mapper/cryptManjaroHome %s %s %s 0 %s"
-msgstr "已加入 fstab : /dev/mapper/cryptManjaroHome %s %s %s 0 %s"
+msgid "Added to fstab : /dev/mapper/cryptNetrunnerHome %s %s %s 0 %s"
+msgstr "已加入 fstab : /dev/mapper/cryptNetrunnerHome %s %s %s 0 %s"
 
 #: src/installation/process.py:811
 msgid "Added to fstab : tmpfs /tmp tmpfs defaults,noatime,mode=1777 0 0"
@@ -1095,12 +1095,12 @@ msgid ""
 "It does not yet properly handle RAID, btrfs subvolumes, or other  \n"
 "advanced setups. Please proceed with caution as data loss is possible! \n"
 "\n"
-"If you find any bugs, please report them at <a href='http://bugs.manjaro.org'>http://bugs.manjaro.org</a>"
-msgstr "Thus 是一個未正式發行的測試版軟體，仍在積極的開發中。\n它還不能處理 RAID 、btrfs 的子卷系統、以及其他\n進階設定。請以資料可能會消失的警覺心繼續進行！\n\n如果您發現任何 bug ，請在 <a href='http://bugs.manjaro.org'>http://bugs.manjaro.org</a> 回報"
+"If you find any bugs, please report them at <a href='http://bugs.Netrunner.org'>http://bugs.Netrunner.org</a>"
+msgstr "Thus 是一個未正式發行的測試版軟體，仍在積極的開發中。\n它還不能處理 RAID 、btrfs 的子卷系統、以及其他\n進階設定。請以資料可能會消失的警覺心繼續進行！\n\n如果您發現任何 bug ，請在 <a href='http://bugs.Netrunner.org'>http://bugs.Netrunner.org</a> 回報"
 
 #: src/language.py:91
-msgid "Welcome to Manjaro!"
-msgstr "歡迎使用 Manjaro！"
+msgid "Welcome to Netrunner!"
+msgstr "歡迎使用 Netrunner！"
 
 #: src/language.py:108
 msgid "Languages"
@@ -1226,20 +1226,20 @@ msgid "Couldn't execute auto mirroring selection"
 msgstr "無法自動執行鏡像伺服器選擇程式"
 
 #: src/show_message.py:53
-msgid "Manjaro Installer - Error"
-msgstr "Manjaro 安裝程式 - 錯誤"
+msgid "Netrunner Installer - Error"
+msgstr "Netrunner 安裝程式 - 錯誤"
 
 #: src/show_message.py:65
-msgid "Manjaro Installer - Warning"
-msgstr "Manjaro 安裝程式 - 警告"
+msgid "Netrunner Installer - Warning"
+msgstr "Netrunner 安裝程式 - 警告"
 
 #: src/show_message.py:77
-msgid "Manjaro Installer - Information"
-msgstr "Manjaro 安裝程式 - 資訊"
+msgid "Netrunner Installer - Information"
+msgstr "Netrunner 安裝程式 - 資訊"
 
 #: src/show_message.py:88
-msgid "Manjaro Installer - Confirmation"
-msgstr "Manjaro 安裝程式 - 確認"
+msgid "Netrunner Installer - Confirmation"
+msgstr "Netrunner 安裝程式 - 確認"
 
 #: src/slides.py:94 src/slides.py:109
 msgid ""
@@ -1248,8 +1248,8 @@ msgid ""
 msgstr "安裝結束!\n您想立即重新啟動嗎?"
 
 #: src/slides.py:102
-msgid "Installing Manjaro..."
-msgstr "正在安裝 Manjaro..."
+msgid "Installing Netrunner..."
+msgstr "正在安裝 Netrunner..."
 
 #: src/slides.py:107
 msgid "Please wait..."
@@ -1391,9 +1391,9 @@ msgstr "使用一個 root 密碼"
 
 #: src/user_info.py:252
 msgid ""
-"Manjaro will use eCryptfs to encrypt your home directory. Unfortunately, eCryptfs does not handle sparse files well.\n"
+"Netrunner will use eCryptfs to encrypt your home directory. Unfortunately, eCryptfs does not handle sparse files well.\n"
 "\n"
-msgstr "Manjaro 將會使用 eCryptfs 加密您的家目錄。不幸的是，eCryptfs 無法很好地處理稀疏檔案。\n\n"
+msgstr "Netrunner 將會使用 eCryptfs 加密您的家目錄。不幸的是，eCryptfs 無法很好地處理稀疏檔案。\n\n"
 
 #: src/user_info.py:253
 msgid ""
@@ -1521,9 +1521,9 @@ msgstr "使用 LUKS 加密："
 
 #: ui/installation_alongside.ui:16
 msgid ""
-"<span size=\"large\">Choose which OS you want to install Manjaro next "
+"<span size=\"large\">Choose which OS you want to install Netrunner next "
 "to</span>"
-msgstr "<span size=\"large\">選擇您要將 Manjaro 與哪一個作業系統共存</span>"
+msgstr "<span size=\"large\">選擇您要將 Netrunner 與哪一個作業系統共存</span>"
 
 #: ui/installation_alongside.ui:90
 msgid "Choose the new size"
@@ -1534,8 +1534,8 @@ msgid "Other OS"
 msgstr "其他作業系統"
 
 #: ui/installation_alongside.ui:169
-msgid "Manjaro"
-msgstr "Manjaro"
+msgid "Netrunner"
+msgstr "Netrunner"
 
 #: ui/installation_alongside.ui:193 ui/installation_alongside.ui:205
 #: ui/slides.ui:74
@@ -1549,8 +1549,8 @@ msgid ""
 msgstr "<span weight=\"light\" size=\"small\">警告：將會刪除所有您磁碟上的程式、文件、照片、音樂以及其他一切的檔案</span>"
 
 #: ui/installation_ask.ui:70
-msgid "Encrypts the new Manjaro installation for better security"
-msgstr "加密全新的 Manjaro 安裝以獲得更佳的安全性"
+msgid "Encrypts the new Netrunner installation for better security"
+msgstr "加密全新的 Netrunner 安裝以獲得更佳的安全性"
 
 #: ui/installation_ask.ui:91
 msgid ""
@@ -1559,8 +1559,8 @@ msgid ""
 msgstr "<span weight=\"light\" size=\"small\">您將會在下一步被要求輸入加密的密碼</span>"
 
 #: ui/installation_ask.ui:102
-msgid "Use LVM with the new Manjaro installation"
-msgstr "在 Manjaro 的全新安裝中使用 LVM"
+msgid "Use LVM with the new Netrunner installation"
+msgstr "在 Netrunner 的全新安裝中使用 LVM"
 
 #: ui/installation_ask.ui:123
 msgid ""
@@ -1581,20 +1581,20 @@ msgstr "與其他作業系統共存"
 #: ui/installation_ask.ui:192
 msgid ""
 "<span weight=\"light\" size=\"small\">With this option you will be "
-"installing Manjaro alongside one of the other OSes you already have "
+"installing Netrunner alongside one of the other OSes you already have "
 "installed.</span>"
-msgstr "<span weight=\"light\" size=\"small\">使用這個選項您就可以將 Manjaro 與其他已安裝的系統共存安裝。With this option you will be installing Manjaro alongside one of the other OSes you already have installed.</span>"
+msgstr "<span weight=\"light\" size=\"small\">使用這個選項您就可以將 Netrunner 與其他已安裝的系統共存安裝。With this option you will be installing Netrunner alongside one of the other OSes you already have installed.</span>"
 
 #: ui/installation_ask.ui:204
-msgid "Manage your partitions and choose where to install Manjaro (advanced)"
-msgstr "自訂您的分割區並選擇您要安裝 Manjaro 的位置 （進階）"
+msgid "Manage your partitions and choose where to install Netrunner (advanced)"
+msgstr "自訂您的分割區並選擇您要安裝 Netrunner 的位置 （進階）"
 
 #: ui/installation_ask.ui:230
 msgid ""
 "<span weight=\"light\" size=\"small\">You will be able to create/delete "
-"partitions, choose where to install Manjaro and also choose additional mount"
+"partitions, choose where to install Netrunner and also choose additional mount"
 " points.</span>"
-msgstr "<span weight=\"light\" size=\"small\">您將要增加/刪除分割區，選擇您要安裝 Manjaro 的地方以及選擇額外的掛載點。</span>"
+msgstr "<span weight=\"light\" size=\"small\">您將要增加/刪除分割區，選擇您要安裝 Netrunner 的地方以及選擇額外的掛載點。</span>"
 
 #: ui/installation_automatic.ui:38
 msgid ""
@@ -1612,12 +1612,12 @@ msgid ""
 "\n"
 "Thus is pre-release beta software that is under active development. It does not yet properly handle RAID, btrfs subvolumes, or other advanced setups. Please proceed with caution as data loss is possible! \n"
 "\n"
-"If you find any bug, please, visit <a href='http://bugs.manjaro.org'>http://bugs.manjaro.org</a>"
-msgstr "<span weight='bold'>注意： Thus 安裝程式是一個測試版的軟體。</span>\n\nThus 是一個未正式發行的測試版軟體，仍在積極的開發中。它還不能處理 RAID 、btrfs 的子卷系統、以及其他進階設定。請以資料可能會消失的警覺心繼續進行！\n\n如果您發現任何 bug ，請在 <a href='http://bugs.manjaro.org'>http://bugs.manjaro.org</a> 回報"
+"If you find any bug, please, visit <a href='http://bugs.Netrunner.org'>http://bugs.Netrunner.org</a>"
+msgstr "<span weight='bold'>注意： Thus 安裝程式是一個測試版的軟體。</span>\n\nThus 是一個未正式發行的測試版軟體，仍在積極的開發中。它還不能處理 RAID 、btrfs 的子卷系統、以及其他進階設定。請以資料可能會消失的警覺心繼續進行！\n\n如果您發現任何 bug ，請在 <a href='http://bugs.Netrunner.org'>http://bugs.Netrunner.org</a> 回報"
 
 #: ui/thus.ui:37
-msgid "<span weight=\"bold\" size=\"large\">Welcome to Manjaro</span>"
-msgstr "<span weight=\"bold\" size=\"large\">歡迎使用 Manjaro</span>"
+msgid "<span weight=\"bold\" size=\"large\">Welcome to Netrunner</span>"
+msgstr "<span weight=\"bold\" size=\"large\">歡迎使用 Netrunner</span>"
 
 #: ui/user_info.ui:119 ui/user_info.ui:589
 msgid "<small><span color=\"darkgreen\">Strong password</span></small>"

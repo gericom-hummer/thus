@@ -6,6 +6,7 @@
 #  This file was forked from Cnchi (graphical installer from Antergos)
 #  Check it at https://github.com/antergos
 #
+#  Copyright 2014 Netrunner (http://netrunner-os.com)
 #  Copyright 2013 Antergos (http://antergos.com/)
 #  Copyright 2013 Manjaro (http://manjaro.org)
 #
@@ -110,7 +111,7 @@ class InstallationAsk(Gtk.Box):
 
         # Automatic Install
         radio = self.ui.get_object("automatic_radiobutton")
-        radio.set_label(_("Erase disk and install Manjaro (automatic)"))
+        radio.set_label(_("Erase disk and install Netrunner (automatic)"))
 
         label = self.ui.get_object("automatic_description")
         txt = _("Warning: This will delete all data on your disk")
@@ -149,19 +150,19 @@ class InstallationAsk(Gtk.Box):
         if "windows" in self.other_os.lower():
             radio = self.ui.get_object("alongside_radiobutton")
             label = self.ui.get_object("alongside_description")
-            radio.set_label(_("Install Manjaro alongside %s") % self.other_os)
+            radio.set_label(_("Install Netrunner alongside %s") % self.other_os)
 
-            txt = _("Install Manjaro alongside %s") % self.other_os
+            txt = _("Install Netrunner alongside %s") % self.other_os
             txt = '<span weight="light" size="small">%s</span>' % txt
             label.set_markup(txt)
             label.set_line_wrap(True)
 
         # Advanced Install
         radio = self.ui.get_object("advanced_radiobutton")
-        radio.set_label(_("Manage your partitions and where to install Manjaro (advanced)"))
+        radio.set_label(_("Manage your partitions and where to install Netrunner (advanced)"))
 
         label = self.ui.get_object("advanced_description")
-        txt = _("You will be able to create/delete partitions, choose where to install Manjaro and also choose additional mount points.")
+        txt = _("You will be able to create/delete partitions, choose where to install Netrunner and also choose additional mount points.")
         txt = '<span weight="light" size="small">%s</span>' % txt
         label.set_markup(txt)
         label.set_line_wrap(True)
@@ -187,14 +188,14 @@ class InstallationAsk(Gtk.Box):
             self.settings.set('use_home', False)
 
         if self.settings.get('use_luks'):
-            logging.info(_("Manjaro installation will be encrypted using LUKS"))
+            logging.info(_("Netrunner installation will be encrypted using LUKS"))
 
         if self.settings.get('use_lvm'):
-            logging.info(_("Manjaro will be installed using LVM volumes"))
+            logging.info(_("Netrunner will be installed using LVM volumes"))
             if self.settings.get('use_home'):
-                logging.info(_("Manjaro will be installed using a separate /home volume."))
+                logging.info(_("Netrunner will be installed using a separate /home volume."))
         elif self.settings.get('use_home'):
-            logging.info(_("Manjaro will be installed using a separate /home partition."))
+            logging.info(_("Netrunner will be installed using a separate /home partition."))
 
         if self.next_page == "installation_alongside":
             self.settings.set('partition_mode', 'alongside')

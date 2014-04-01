@@ -3,6 +3,7 @@
 #
 #  language.py
 #
+#  Copyright 2014 Netrunner (http://netrunner-os.com)
 #  Copyright 2013 Antergos (http://antergos.com/)
 #
 #  This program is free software; you can redistribute it and/or modify
@@ -88,7 +89,7 @@ class Language(Gtk.Box):
         txt = "<span weight='bold'>%s</span>\n\n" % txt_bold + txt
         label.set_markup(txt)
 
-        txt = _("Welcome to Manjaro!")
+        txt = _("Welcome to Netrunner!")
         txt = "<span weight='bold' size='large'>%s</span>" % txt
         self.title.set_markup(txt)
 

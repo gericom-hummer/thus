@@ -44,8 +44,8 @@ msgid "Thus installer version %s"
 msgstr "Inštalátor Thus verzia %s"
 
 #: thus.py:234
-msgid "Manjaro Installer"
-msgstr "Inštalátor Manjaro"
+msgid "Netrunner Installer"
+msgstr "Inštalátor Netrunner"
 
 #: thus.py:290
 msgid "Quiting installer..."
@@ -490,8 +490,8 @@ msgstr "Thus nenainštaluje žiadny zavádzač"
 
 #: src/installation/advanced.py:1860
 #, python-format
-msgid "Manjaro will install the bootloader of type %s in %s"
-msgstr "Manjaro nainštaluje zavádzač typu %s do %s"
+msgid "Netrunner will install the bootloader of type %s in %s"
+msgstr "Netrunner nainštaluje zavádzač typu %s do %s"
 
 #: src/installation/advanced.py:1876 src/installation/alongside.py:512
 #: src/installation/automatic.py:247
@@ -504,12 +504,12 @@ msgid "Can't load %s css"
 msgstr "Nie je možné načítať css %s"
 
 #: src/installation/alongside.py:142
-msgid "Choose which OS you want to install Manjaro next to"
-msgstr "Vyberte si vedľa ktorého operačného systému si prajete nainštalovať Manjaro"
+msgid "Choose which OS you want to install Netrunner next to"
+msgstr "Vyberte si vedľa ktorého operačného systému si prajete nainštalovať Netrunner"
 
 #: src/installation/alongside.py:146
-msgid "Manjaro alongside another OS"
-msgstr "Nainštalovať Manjaro vedľa iného operačného systému"
+msgid "Netrunner alongside another OS"
+msgstr "Nainštalovať Netrunner vedľa iného operačného systému"
 
 #: src/installation/alongside.py:175
 msgid "Detected OS"
@@ -563,8 +563,8 @@ msgid "Installation type"
 msgstr "Spôsob inštalácie"
 
 #: src/installation/ask.py:113 ui/installation_ask.ui:34
-msgid "Erase disk and install Manjaro (automatic)"
-msgstr "Vymazať disk a nainštalovať Manjaro (automaticky)"
+msgid "Erase disk and install Netrunner (automatic)"
+msgstr "Vymazať disk a nainštalovať Netrunner (automaticky)"
 
 #: src/installation/ask.py:116
 msgid "Warning: This will delete all data on your disk"
@@ -599,34 +599,34 @@ msgstr "Táto voľba umiestni váš /home adresár na iný diskový oddiel, či 
 
 #: src/installation/ask.py:152 src/installation/ask.py:154
 #, python-format
-msgid "Install Manjaro alongside %s"
-msgstr "Nainštalovať Manjaro vedľa %s"
+msgid "Install Netrunner alongside %s"
+msgstr "Nainštalovať Netrunner vedľa %s"
 
 #: src/installation/ask.py:161
-msgid "Manage your partitions and where to install Manjaro (advanced)"
-msgstr "Spravujte si svoje oddiely a miesto inštalácie Manjaro (pokročilé)"
+msgid "Manage your partitions and where to install Netrunner (advanced)"
+msgstr "Spravujte si svoje oddiely a miesto inštalácie Netrunner (pokročilé)"
 
 #: src/installation/ask.py:164
 msgid ""
 "You will be able to create/delete partitions, choose where to install "
-"Manjaro and also choose additional mount points."
-msgstr "Budete môcť vytvoriť/odstrániť oddiely, zvoliť si miesto inštalácie Manjaro a taktiež určiť ďalšie prípojné body."
+"Netrunner and also choose additional mount points."
+msgstr "Budete môcť vytvoriť/odstrániť oddiely, zvoliť si miesto inštalácie Netrunner a taktiež určiť ďalšie prípojné body."
 
 #: src/installation/ask.py:190
-msgid "Manjaro installation will be encrypted using LUKS"
-msgstr "Inštalácia Manjaro bude zašifrovaná pomocou LUKS"
+msgid "Netrunner installation will be encrypted using LUKS"
+msgstr "Inštalácia Netrunner bude zašifrovaná pomocou LUKS"
 
 #: src/installation/ask.py:193
-msgid "Manjaro will be installed using LVM volumes"
-msgstr "Manjaro sa nainštaluje pomocou LVM"
+msgid "Netrunner will be installed using LVM volumes"
+msgstr "Netrunner sa nainštaluje pomocou LVM"
 
 #: src/installation/ask.py:195
-msgid "Manjaro will be installed using a separate /home volume."
-msgstr "Manjaro sa nainštaluje s oddeleným zväzkom /home"
+msgid "Netrunner will be installed using a separate /home volume."
+msgstr "Netrunner sa nainštaluje s oddeleným zväzkom /home"
 
 #: src/installation/ask.py:197
-msgid "Manjaro will be installed using a separate /home partition."
-msgstr "Manjaro sa nainštaluje s oddeleným oddielom /home"
+msgid "Netrunner will be installed using a separate /home partition."
+msgstr "Netrunner sa nainštaluje s oddeleným oddielom /home"
 
 #: src/installation/automatic.py:75
 msgid "Automatic installation mode"
@@ -643,9 +643,9 @@ msgstr "POZOR! Tento typ inštalácie prepíše všetky dáta na vašom disku!"
 
 #: src/installation/automatic.py:88 ui/installation_automatic.ui:59
 msgid ""
-"Please choose the drive where you want to install Manjaro\n"
+"Please choose the drive where you want to install Netrunner\n"
 "and click the button below to start the process."
-msgstr "Prosím, zvoľte jednotku pre inštaláciu Manjaro \na kliknite na tlačidlo dole pre začatie procesu."
+msgstr "Prosím, zvoľte jednotku pre inštaláciu Netrunner \na kliknite na tlačidlo dole pre začatie procesu."
 
 #: src/installation/automatic.py:93 ui/installation_automatic.ui:176
 msgid "Encryption Password:"
@@ -862,8 +862,8 @@ msgstr "Pridané do crypttab: %s"
 
 #: src/installation/process.py:764
 #, python-format
-msgid "Added to fstab : /dev/mapper/cryptManjaroHome %s %s %s 0 %s"
-msgstr "Pridané do fstab: /dev/mapper/cryptManjaroHome %s %s %s 0 %s"
+msgid "Added to fstab : /dev/mapper/cryptNetrunnerHome %s %s %s 0 %s"
+msgstr "Pridané do fstab: /dev/mapper/cryptNetrunnerHome %s %s %s 0 %s"
 
 #: src/installation/process.py:811
 msgid "Added to fstab : tmpfs /tmp tmpfs defaults,noatime,mode=1777 0 0"
@@ -1096,8 +1096,8 @@ msgid ""
 msgstr "Thus je pre-release beta softvér pod aktívnym vývojom.\nZatiaľ nepracuje správne s RAID, brtfs\na inými pokročilými nastaveniami. Prosím, pokračujte s týmto na vedomí, nakoľko strata dát je možná!\n\nAk nájdete akúkoľvek chybu, navštívte <a href='http://bugs.manjaro.org'>http://bugs.manjaro.org</a>"
 
 #: src/language.py:91
-msgid "Welcome to Manjaro!"
-msgstr "Vitajte v Manjaro!"
+msgid "Welcome to Netrunner!"
+msgstr "Vitajte v Netrunner!"
 
 #: src/language.py:108
 msgid "Languages"
@@ -1223,20 +1223,20 @@ msgid "Couldn't execute auto mirroring selection"
 msgstr "Zlyhal automatický výber mirrorov"
 
 #: src/show_message.py:53
-msgid "Manjaro Installer - Error"
-msgstr "Manjaro inštalátor- Chyba"
+msgid "Netrunner Installer - Error"
+msgstr "Netrunner inštalátor- Chyba"
 
 #: src/show_message.py:65
-msgid "Manjaro Installer - Warning"
-msgstr "Manjaro inštalátor- Upozornenie"
+msgid "Netrunner Installer - Warning"
+msgstr "Netrunner inštalátor- Upozornenie"
 
 #: src/show_message.py:77
-msgid "Manjaro Installer - Information"
-msgstr "Manjaro inštalátor- Oznámenie"
+msgid "Netrunner Installer - Information"
+msgstr "Netrunner inštalátor- Oznámenie"
 
 #: src/show_message.py:88
-msgid "Manjaro Installer - Confirmation"
-msgstr ""
+msgid "Netrunner Installer - Question"
+msgstr "Netrunner inštalátor- Otázka"
 
 #: src/slides.py:94 src/slides.py:109
 msgid ""
@@ -1245,8 +1245,8 @@ msgid ""
 msgstr "Inštalácia ukončená!\nPrajete si reštartovať váš systém teraz?"
 
 #: src/slides.py:102
-msgid "Installing Manjaro..."
-msgstr "Inštalujem Manjaro..."
+msgid "Installing Netrunner..."
+msgstr "Inštalujem Netrunner..."
 
 #: src/slides.py:107
 msgid "Please wait..."
@@ -1388,9 +1388,9 @@ msgstr "Použiť heslo root"
 
 #: src/user_info.py:252
 msgid ""
-"Manjaro will use eCryptfs to encrypt your home directory. Unfortunately, eCryptfs does not handle sparse files well.\n"
+"Netrunner will use eCryptfs to encrypt your home directory. Unfortunately, eCryptfs does not handle sparse files well.\n"
 "\n"
-msgstr "Manjaro pre zašifrovanie vášho domovského priečinku použije ECryptfs. Naneštastie, eCryptfs nedokáže spracovať súbory sparse veľmi dobre.\n"
+msgstr "Netrunner pre zašifrovanie vášho domovského priečinku použije ECryptfs. Naneštastie, eCryptfs nedokáže spracovať súbory sparse veľmi dobre.\n"
 
 #: src/user_info.py:253
 msgid ""
@@ -1518,9 +1518,9 @@ msgstr "Použiť šifrovanie LUKS:"
 
 #: ui/installation_alongside.ui:16
 msgid ""
-"<span size=\"large\">Choose which OS you want to install Manjaro next "
+"<span size=\"large\">Choose which OS you want to install Netrunner next "
 "to</span>"
-msgstr "<span size=\"large\">Vyberte si vedľa ktorého operačného systému si prajete nainštalovať Manjaro</span>"
+msgstr "<span size=\"large\">Vyberte si vedľa ktorého operačného systému si prajete nainštalovať Netrunner</span>"
 
 #: ui/installation_alongside.ui:90
 msgid "Choose the new size"
@@ -1531,8 +1531,8 @@ msgid "Other OS"
 msgstr "Iný OS"
 
 #: ui/installation_alongside.ui:169
-msgid "Manjaro"
-msgstr "Manjaro"
+msgid "Netrunner"
+msgstr "Netrunner"
 
 #: ui/installation_alongside.ui:193 ui/installation_alongside.ui:205
 #: ui/slides.ui:74
@@ -1546,8 +1546,8 @@ msgid ""
 msgstr "<span weight=\"light\" size=\"small\">Pozor: Toto vymaže všetky programy, dokumenty, fotky, hudbu a ostatné súbory z vášho disku</span>"
 
 #: ui/installation_ask.ui:70
-msgid "Encrypts the new Manjaro installation for better security"
-msgstr "Zašifrovať Manjaro pre lepšiu bezpečnosť"
+msgid "Encrypts the new Netrunner installation for better security"
+msgstr "Zašifrovať Netrunner pre lepšiu bezpečnosť"
 
 #: ui/installation_ask.ui:91
 msgid ""
@@ -1556,8 +1556,8 @@ msgid ""
 msgstr "<span weight=\"light\" size=\"small\">O váš šifrovací kľúč vás požiadame v nasledujúcom kroku</span>"
 
 #: ui/installation_ask.ui:102
-msgid "Use LVM with the new Manjaro installation"
-msgstr "V novej inštalácii Manjaro použiť LVM"
+msgid "Use LVM with the new Netrunner installation"
+msgstr "V novej inštalácii Netrunner použiť LVM"
 
 #: ui/installation_ask.ui:123
 msgid ""
@@ -1578,20 +1578,20 @@ msgstr "Nainštalovať vedľa ostatných operačných systémov"
 #: ui/installation_ask.ui:192
 msgid ""
 "<span weight=\"light\" size=\"small\">With this option you will be "
-"installing Manjaro alongside one of the other OSes you already have "
+"installing Netrunner alongside one of the other OSes you already have "
 "installed.</span>"
-msgstr "<span weight=\"light\" size=\"small\">Táto možnosť nainštaluje Manjaro vedľa iného operačného systému, ktorý už máte nainštalovaný.</span>"
+msgstr "<span weight=\"light\" size=\"small\">Táto možnosť nainštaluje Netrunner vedľa iného operačného systému, ktorý už máte nainštalovaný.</span>"
 
 #: ui/installation_ask.ui:204
-msgid "Manage your partitions and choose where to install Manjaro (advanced)"
-msgstr "Spravovať vaše oddiely a zvoliť si kde nainštalovať Manjaro (pokročilé)"
+msgid "Manage your partitions and choose where to install Netrunner (advanced)"
+msgstr "Spravovať vaše oddiely a zvoliť si kde nainštalovať Netrunner (pokročilé)"
 
 #: ui/installation_ask.ui:230
 msgid ""
 "<span weight=\"light\" size=\"small\">You will be able to create/delete "
-"partitions, choose where to install Manjaro and also choose additional mount"
+"partitions, choose where to install Netrunner and also choose additional mount"
 " points.</span>"
-msgstr "<span weight=\"light\" size=\"small\">Budete môcť vytvoriť/odstrániť oddiely, zvoliť si miesto inštalácie Manjaro a taktiež určiť ďalšie prípojné body</span>"
+msgstr "<span weight=\"light\" size=\"small\">Budete môcť vytvoriť/odstrániť oddiely, zvoliť si miesto inštalácie Netrunner a taktiež určiť ďalšie prípojné body</span>"
 
 #: ui/installation_automatic.ui:38
 msgid ""
@@ -1613,8 +1613,8 @@ msgid ""
 msgstr "<span weight='bold'>Berte na vedomie: Thus inštalátor je v štádiu beta.</span>\n\n\nThus je pre-release beta softvér pod aktívnym vývojom. Zatiaľ nepracuje správne s RAID, brtfs a inými pokročilými nastaveniami. Prosím, pokračujte s týmto na vedomí, nakoľko strata dát je možná!\n\n\nAk nájdete akúkoľvek chybu, navštívte <a href='http://bugs.manjaro.org'>http://bugs.manjaro.org</a>"
 
 #: ui/thus.ui:37
-msgid "<span weight=\"bold\" size=\"large\">Welcome to Manjaro</span>"
-msgstr "<span weight=\"bold\" size=\"large\">Vitajte v Manjaro</span>"
+msgid "<span weight=\"bold\" size=\"large\">Welcome to Netrunner</span>"
+msgstr "<span weight=\"bold\" size=\"large\">Vitajte v Netrunner</span>"
 
 #: ui/user_info.ui:119 ui/user_info.ui:589
 msgid "<small><span color=\"darkgreen\">Strong password</span></small>"

@@ -40,8 +40,8 @@ msgid "Thus installer version %s"
 msgstr "Trình cài đặt Thus phiên bản %s"
 
 #: thus.py:234
-msgid "Manjaro Installer"
-msgstr "Trình cài đặt Manjaro"
+msgid "Netrunner Installer"
+msgstr "Trình cài đặt Netrunner"
 
 #: thus.py:290
 msgid "Quiting installer..."
@@ -486,8 +486,8 @@ msgstr "Thus sẽ không cài bất cứ bộ nạp khởi động nào"
 
 #: src/installation/advanced.py:1860
 #, python-format
-msgid "Manjaro will install the bootloader of type %s in %s"
-msgstr "Manjaro sẽ cài đặt trình khởi động loại %s ở %s"
+msgid "Netrunner will install the bootloader of type %s in %s"
+msgstr "Netrunner sẽ cài đặt trình khởi động loại %s ở %s"
 
 #: src/installation/advanced.py:1876 src/installation/alongside.py:512
 #: src/installation/automatic.py:247
@@ -500,12 +500,12 @@ msgid "Can't load %s css"
 msgstr "Không thể nạp %s css"
 
 #: src/installation/alongside.py:142
-msgid "Choose which OS you want to install Manjaro next to"
-msgstr "Chọn hệ điều hành bạn muốn cài đặt cạnh Manjaro"
+msgid "Choose which OS you want to install Netrunner next to"
+msgstr "Chọn hệ điều hành bạn muốn cài đặt cạnh Netrunner"
 
 #: src/installation/alongside.py:146
-msgid "Manjaro alongside another OS"
-msgstr "Manjaro song song với HĐH khác"
+msgid "Netrunner alongside another OS"
+msgstr "Netrunner song song với HĐH khác"
 
 #: src/installation/alongside.py:175
 msgid "Detected OS"
@@ -559,8 +559,8 @@ msgid "Installation type"
 msgstr "Loại cài đặt"
 
 #: src/installation/ask.py:113 ui/installation_ask.ui:34
-msgid "Erase disk and install Manjaro (automatic)"
-msgstr "Xóa đĩa và cài đặt Manjaro (tự động)"
+msgid "Erase disk and install Netrunner (automatic)"
+msgstr "Xóa đĩa và cài đặt Netrunner (tự động)"
 
 #: src/installation/ask.py:116
 msgid "Warning: This will delete all data on your disk"
@@ -595,34 +595,34 @@ msgstr ""
 
 #: src/installation/ask.py:152 src/installation/ask.py:154
 #, python-format
-msgid "Install Manjaro alongside %s"
-msgstr "Cài đặt Manjaro song song với %s"
+msgid "Install Netrunner alongside %s"
+msgstr "Cài đặt Netrunner song song với %s"
 
 #: src/installation/ask.py:161
-msgid "Manage your partitions and where to install Manjaro (advanced)"
-msgstr "Quản lý phân vùng của bạn và nơi để cài đặt Manjaro (nâng cao)"
+msgid "Manage your partitions and where to install Netrunner (advanced)"
+msgstr "Quản lý phân vùng của bạn và nơi để cài đặt Netrunner (nâng cao)"
 
 #: src/installation/ask.py:164
 msgid ""
 "You will be able to create/delete partitions, choose where to install "
-"Manjaro and also choose additional mount points."
-msgstr "Bạn có thể tạo/xóa các phân vùng, chọn nơi để cài đặt Manjaro và đồng thời chọn các điểm gắn kết."
+"Netrunner and also choose additional mount points."
+msgstr "Bạn có thể tạo/xóa các phân vùng, chọn nơi để cài đặt Netrunner và đồng thời chọn các điểm gắn kết."
 
 #: src/installation/ask.py:190
-msgid "Manjaro installation will be encrypted using LUKS"
-msgstr "Quá trình cài đặt Manjaro sẽ mã hóa bằng LUKS"
+msgid "Netrunner installation will be encrypted using LUKS"
+msgstr "Quá trình cài đặt Netrunner sẽ mã hóa bằng LUKS"
 
 #: src/installation/ask.py:193
-msgid "Manjaro will be installed using LVM volumes"
-msgstr "Manjaro sẽ được cài đặt sử dụng ổ cứng LVM"
+msgid "Netrunner will be installed using LVM volumes"
+msgstr "Netrunner sẽ được cài đặt sử dụng ổ cứng LVM"
 
 #: src/installation/ask.py:195
-msgid "Manjaro will be installed using a separate /home volume."
-msgstr "Manjaro sẽ được cài đặt sử dụng ổ cứng riêng biệt như /home"
+msgid "Netrunner will be installed using a separate /home volume."
+msgstr "Netrunner sẽ được cài đặt sử dụng ổ cứng riêng biệt như /home"
 
 #: src/installation/ask.py:197
-msgid "Manjaro will be installed using a separate /home partition."
-msgstr "Manjaro sẽ được cài đặt sử dụng phân vùng riêng biệt như /home"
+msgid "Netrunner will be installed using a separate /home partition."
+msgstr "Netrunner sẽ được cài đặt sử dụng phân vùng riêng biệt như /home"
 
 #: src/installation/automatic.py:75
 msgid "Automatic installation mode"
@@ -639,9 +639,9 @@ msgstr "CẢNH BÁO! Chế độ cài đặt sẽ viết đè lên mọi thứ t
 
 #: src/installation/automatic.py:88 ui/installation_automatic.ui:59
 msgid ""
-"Please choose the drive where you want to install Manjaro\n"
+"Please choose the drive where you want to install Netrunner\n"
 "and click the button below to start the process."
-msgstr "Hãy chọn ổ đĩa nơi bạn muốn cài đặt Manjaro\nvà nhấn nút bên dưới để bắt đầu tiến trình."
+msgstr "Hãy chọn ổ đĩa nơi bạn muốn cài đặt Netrunner\nvà nhấn nút bên dưới để bắt đầu tiến trình."
 
 #: src/installation/automatic.py:93 ui/installation_automatic.ui:176
 msgid "Encryption Password:"
@@ -858,8 +858,8 @@ msgstr "Đã thêm vào crypttab : %s"
 
 #: src/installation/process.py:764
 #, python-format
-msgid "Added to fstab : /dev/mapper/cryptManjaroHome %s %s %s 0 %s"
-msgstr "Đã thêm vào fstab : /dev/mapper/cryptManjaroHome %s %s %s 0 %s"
+msgid "Added to fstab : /dev/mapper/cryptNetrunnerHome %s %s %s 0 %s"
+msgstr "Đã thêm vào fstab : /dev/mapper/cryptNetrunnerHome %s %s %s 0 %s"
 
 #: src/installation/process.py:811
 msgid "Added to fstab : tmpfs /tmp tmpfs defaults,noatime,mode=1777 0 0"
@@ -1092,8 +1092,8 @@ msgid ""
 msgstr "Thus là phần mềm thử nghiệm tiền phát hành đang được phát triển\nNó chưa thể xử lý RAID, ổ đĩa đệm btrfs, và các cài đặt nâng cao khác.\nSử dụng với chú ý rằng bạn có thể mất dữ liệu.\n\nNếu phát hiện bất kỳ lỗi nào, hãy báo cáo tại <a href='http://bugs.manjaro.org'>http://bugs.manjaro.org</a>"
 
 #: src/language.py:91
-msgid "Welcome to Manjaro!"
-msgstr "Chào mừng bạn tới với Manjaro!"
+msgid "Welcome to Netrunner!"
+msgstr "Chào mừng bạn tới với Netrunner!"
 
 #: src/language.py:108
 msgid "Languages"
@@ -1219,20 +1219,20 @@ msgid "Couldn't execute auto mirroring selection"
 msgstr "Không thể thực thi tự động lựa chọn kho"
 
 #: src/show_message.py:53
-msgid "Manjaro Installer - Error"
-msgstr "Trình cài đặt Manjaro - Lỗi"
+msgid "Netrunner Installer - Error"
+msgstr "Trình cài đặt Netrunner - Lỗi"
 
 #: src/show_message.py:65
-msgid "Manjaro Installer - Warning"
-msgstr "Trình cài đặt Manjaro - Cảnh báo"
+msgid "Netrunner Installer - Warning"
+msgstr "Trình cài đặt Netrunner - Cảnh báo"
 
 #: src/show_message.py:77
-msgid "Manjaro Installer - Information"
-msgstr "Trình cài đặt Manjaro - Thông tin"
+msgid "Netrunner Installer - Information"
+msgstr "Trình cài đặt Netrunner - Thông tin"
 
 #: src/show_message.py:88
-msgid "Manjaro Installer - Confirmation"
-msgstr ""
+msgid "Netrunner Installer - Question"
+msgstr "Trình cài đặt Netrunner - Câu hỏi"
 
 #: src/slides.py:94 src/slides.py:109
 msgid ""
@@ -1241,8 +1241,8 @@ msgid ""
 msgstr "Cài đặt hoàn tất!\nBạn có muốn khởi động lại hệ thống?"
 
 #: src/slides.py:102
-msgid "Installing Manjaro..."
-msgstr "Đang cài đặt Manjaro..."
+msgid "Installing Netrunner..."
+msgstr "Đang cài đặt Netrunner..."
 
 #: src/slides.py:107
 msgid "Please wait..."
@@ -1384,9 +1384,9 @@ msgstr "Sử dụng mật khẩu của root"
 
 #: src/user_info.py:252
 msgid ""
-"Manjaro will use eCryptfs to encrypt your home directory. Unfortunately, eCryptfs does not handle sparse files well.\n"
+"Netrunner will use eCryptfs to encrypt your home directory. Unfortunately, eCryptfs does not handle sparse files well.\n"
 "\n"
-msgstr "Manjaro sẽ sử dụng eCryptfs để mã hóa thư mục cá nhân của bạn. Không may là eCryptfs không xử lý được những tệp tin rải rác.\n"
+msgstr "Netrunner sẽ sử dụng eCryptfs để mã hóa thư mục cá nhân của bạn. Không may là eCryptfs không xử lý được những tệp tin rải rác.\n"
 
 #: src/user_info.py:253
 msgid ""
@@ -1514,9 +1514,9 @@ msgstr "Sử dụng mã hóa LUKS:"
 
 #: ui/installation_alongside.ui:16
 msgid ""
-"<span size=\"large\">Choose which OS you want to install Manjaro next "
+"<span size=\"large\">Choose which OS you want to install Netrunner next "
 "to</span>"
-msgstr "<span size=\"large\">Chọn HĐH bạn muốn được cài đặt cùng Manjaro</span>"
+msgstr "<span size=\"large\">Chọn HĐH bạn muốn được cài đặt cùng Netrunner</span>"
 
 #: ui/installation_alongside.ui:90
 msgid "Choose the new size"
@@ -1527,8 +1527,8 @@ msgid "Other OS"
 msgstr "Hệ điều hành khác"
 
 #: ui/installation_alongside.ui:169
-msgid "Manjaro"
-msgstr "Manjaro"
+msgid "Netrunner"
+msgstr "Netrunner"
 
 #: ui/installation_alongside.ui:193 ui/installation_alongside.ui:205
 #: ui/slides.ui:74
@@ -1542,8 +1542,8 @@ msgid ""
 msgstr "<span weight=\"light\" size=\"small\">Cảnh báo: Việc này sẽ xóa toàn bộ chương trình, tài liệu, ảnh, âm nhạc và các tệp tin khác trên đĩa của bạn</span>"
 
 #: ui/installation_ask.ui:70
-msgid "Encrypts the new Manjaro installation for better security"
-msgstr "Mã hóa tiến trình cài đặt Manjaro để có được an ninh tốt hơn"
+msgid "Encrypts the new Netrunner installation for better security"
+msgstr "Mã hóa tiến trình cài đặt Netrunner để có được an ninh tốt hơn"
 
 #: ui/installation_ask.ui:91
 msgid ""
@@ -1552,8 +1552,8 @@ msgid ""
 msgstr "<span weight=\"light\" size=\"small\">Bạn sẽ được hỏi về khóa mã hóa trong bước tiếp theo</span>"
 
 #: ui/installation_ask.ui:102
-msgid "Use LVM with the new Manjaro installation"
-msgstr "Sử dụng LVM với tiến trình cài đặt Manjaro mới"
+msgid "Use LVM with the new Netrunner installation"
+msgstr "Sử dụng LVM với tiến trình cài đặt Netrunner mới"
 
 #: ui/installation_ask.ui:123
 msgid ""
@@ -1574,20 +1574,20 @@ msgstr "Cài đặt song song với hệ điều hành khác"
 #: ui/installation_ask.ui:192
 msgid ""
 "<span weight=\"light\" size=\"small\">With this option you will be "
-"installing Manjaro alongside one of the other OSes you already have "
+"installing Netrunner alongside one of the other OSes you already have "
 "installed.</span>"
-msgstr "<span weight=\"light\" size=\"small\">Với lựa chọn này bạn sẽ cài đặt Manjaro song song với những HĐH khác đã được cài đặt.</span>"
+msgstr "<span weight=\"light\" size=\"small\">Với lựa chọn này bạn sẽ cài đặt Netrunner song song với những HĐH khác đã được cài đặt.</span>"
 
 #: ui/installation_ask.ui:204
-msgid "Manage your partitions and choose where to install Manjaro (advanced)"
-msgstr "Quản lý phân vùng và chọn nơi để cài đặt Manjaro (nâng cao)"
+msgid "Manage your partitions and choose where to install Netrunner (advanced)"
+msgstr "Quản lý phân vùng và chọn nơi để cài đặt Netrunner (nâng cao)"
 
 #: ui/installation_ask.ui:230
 msgid ""
 "<span weight=\"light\" size=\"small\">You will be able to create/delete "
-"partitions, choose where to install Manjaro and also choose additional mount"
+"partitions, choose where to install Netrunner and also choose additional mount"
 " points.</span>"
-msgstr "<span weight=\"light\" size=\"small\">Bạn có thể tạo/xóa các phân vùng, chọn nơi để cài đặt Manjaro và đồng thời chọn các điểm gắn kết.</span>"
+msgstr "<span weight=\"light\" size=\"small\">Bạn có thể tạo/xóa các phân vùng, chọn nơi để cài đặt Netrunner và đồng thời chọn các điểm gắn kết.</span>"
 
 #: ui/installation_automatic.ui:38
 msgid ""
@@ -1609,8 +1609,8 @@ msgid ""
 msgstr "<span weight='bold'>Chú ý: Trình cài đặt Thus là phần mềm vẫn đang được phát triển.</span>\n\nThus là phần mềm thử nghiệm tiền phát hành đang được phát triển Nó chưa thể xử lý RAID, ổ đĩa đệm btrfs, và các cài đặt nâng cao khác. Sử dụng với chú ý rằng bạn có thể mất dữ liệu.\n\nNếu phát hiện bất kỳ lỗi nào, hãy báo cáo tại <a href='http://bugs.manjaro.org'>http://bugs.manjaro.org</a>"
 
 #: ui/thus.ui:37
-msgid "<span weight=\"bold\" size=\"large\">Welcome to Manjaro</span>"
-msgstr "<span weight=\"bold\" size=\"large\">Chào mừng bạn tới với Manjaro</span>"
+msgid "<span weight=\"bold\" size=\"large\">Welcome to Netrunner</span>"
+msgstr "<span weight=\"bold\" size=\"large\">Chào mừng bạn tới với Netrunner</span>"
 
 #: ui/user_info.ui:119 ui/user_info.ui:589
 msgid "<small><span color=\"darkgreen\">Strong password</span></small>"

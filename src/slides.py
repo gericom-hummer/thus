@@ -99,7 +99,7 @@ class Slides(Gtk.Box):
         self.fatal_error = False
 
     def translate_ui(self):
-        txt = _("Installing Manjaro...")
+        txt = _("Installing Netrunner...")
         txt = "<span weight='bold' size='large'>%s</span>" % txt
         self.title.set_markup(txt)
 

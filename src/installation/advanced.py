@@ -6,6 +6,7 @@
 #  This file was forked from Cnchi (graphical installer from Antergos)
 #  Check it at https://github.com/antergos
 #
+#  Copyright 2014 Netrunner (http://netrunner-os.com)
 #  Copyright 2013 Antergos (http://antergos.com/)
 #  Copyright 2013 Manjaro (http://manjaro.org)
 #
@@ -1857,7 +1858,7 @@ class InstallationAdvanced(Gtk.Box):
                 bootloader_type = "GRUB2"
                 self.settings.set('bootloader_location', self.grub_device)
             self.settings.set('bootloader_type', bootloader_type)
-            logging.info(_("Manjaro will install the bootloader of type %s in %s"),
+            logging.info(_("Netrunner will install the bootloader of type %s in %s"),
                          self.settings.get('bootloader_type'),
                          self.settings.get('bootloader_location'))
 

@@ -48,8 +48,8 @@ msgid "Thus installer version %s"
 msgstr "Versiunea %s a instalatorului Thus"
 
 #: thus.py:234
-msgid "Manjaro Installer"
-msgstr "Instalator Manjaro"
+msgid "Netrunner Installer"
+msgstr "Instalator Netrunner"
 
 #: thus.py:290
 msgid "Quiting installer..."
@@ -494,8 +494,8 @@ msgstr "Thus nu va instala niciun încărcător de sistem"
 
 #: src/installation/advanced.py:1860
 #, python-format
-msgid "Manjaro will install the bootloader of type %s in %s"
-msgstr "Manjaro va instala încărcătorul de sistem de tipul %s în %s"
+msgid "Netrunner will install the bootloader of type %s in %s"
+msgstr "Netrunner va instala încărcătorul de sistem de tipul %s în %s"
 
 #: src/installation/advanced.py:1876 src/installation/alongside.py:512
 #: src/installation/automatic.py:247
@@ -508,12 +508,12 @@ msgid "Can't load %s css"
 msgstr "Nu se poate încărca css %s"
 
 #: src/installation/alongside.py:142
-msgid "Choose which OS you want to install Manjaro next to"
-msgstr "Alegeți lângă ce SO doriți să instalați Manjaro"
+msgid "Choose which OS you want to install Netrunner next to"
+msgstr "Alegeți lângă ce SO doriți să instalați Netrunner"
 
 #: src/installation/alongside.py:146
-msgid "Manjaro alongside another OS"
-msgstr "Manjaro lângă un alt SO"
+msgid "Netrunner alongside another OS"
+msgstr "Netrunner lângă un alt SO"
 
 #: src/installation/alongside.py:175
 msgid "Detected OS"
@@ -567,8 +567,8 @@ msgid "Installation type"
 msgstr "Tipul instalării"
 
 #: src/installation/ask.py:113 ui/installation_ask.ui:34
-msgid "Erase disk and install Manjaro (automatic)"
-msgstr "Șterge discul și instalează Manjaro (automat)"
+msgid "Erase disk and install Netrunner (automatic)"
+msgstr "Șterge discul și instalează Netrunner (automat)"
 
 #: src/installation/ask.py:116
 msgid "Warning: This will delete all data on your disk"
@@ -603,34 +603,34 @@ msgstr "Aceasta va seta dosarul /home într-o partiție sau într-un volum difer
 
 #: src/installation/ask.py:152 src/installation/ask.py:154
 #, python-format
-msgid "Install Manjaro alongside %s"
-msgstr "Instalează Manjaro lângă %s"
+msgid "Install Netrunner alongside %s"
+msgstr "Instalează Netrunner lângă %s"
 
 #: src/installation/ask.py:161
-msgid "Manage your partitions and where to install Manjaro (advanced)"
-msgstr "Gestionați partițiile și locația instalării Manjaro (avansat)"
+msgid "Manage your partitions and where to install Netrunner (advanced)"
+msgstr "Gestionați partițiile și locația instalării Netrunner (avansat)"
 
 #: src/installation/ask.py:164
 msgid ""
 "You will be able to create/delete partitions, choose where to install "
-"Manjaro and also choose additional mount points."
-msgstr "Veți putea să creați/ștergeți partiții, să alegeți unde se instalează Manjaro și să alegeți puncte de montare adiționale."
+"Netrunner and also choose additional mount points."
+msgstr "Veți putea să creați/ștergeți partiții, să alegeți unde se instalează Netrunner și să alegeți puncte de montare adiționale."
 
 #: src/installation/ask.py:190
-msgid "Manjaro installation will be encrypted using LUKS"
-msgstr "Instalarea Manjaro va fi criptată folosind LUKS"
+msgid "Netrunner installation will be encrypted using LUKS"
+msgstr "Instalarea Netrunner va fi criptată folosind LUKS"
 
 #: src/installation/ask.py:193
-msgid "Manjaro will be installed using LVM volumes"
-msgstr "Manjaro va fi instalat folosind volume LVM"
+msgid "Netrunner will be installed using LVM volumes"
+msgstr "Netrunner va fi instalat folosind volume LVM"
 
 #: src/installation/ask.py:195
-msgid "Manjaro will be installed using a separate /home volume."
-msgstr "Manjaro va fi instalat folosind un volum /home separat."
+msgid "Netrunner will be installed using a separate /home volume."
+msgstr "Netrunner va fi instalat folosind un volum /home separat."
 
 #: src/installation/ask.py:197
-msgid "Manjaro will be installed using a separate /home partition."
-msgstr "Manjaro va fi instalat folosind o partiție /home separată."
+msgid "Netrunner will be installed using a separate /home partition."
+msgstr "Netrunner va fi instalat folosind o partiție /home separată."
 
 #: src/installation/automatic.py:75
 msgid "Automatic installation mode"
@@ -647,9 +647,9 @@ msgstr "ATENȚIE! Acest mod de instalare va suprascrie toată unitatea!"
 
 #: src/installation/automatic.py:88 ui/installation_automatic.ui:59
 msgid ""
-"Please choose the drive where you want to install Manjaro\n"
+"Please choose the drive where you want to install Netrunner\n"
 "and click the button below to start the process."
-msgstr "Alegeți unitatea pe care doriți să instalați Manjaro\nși apăsați butonul de mai jos pentru a începe"
+msgstr "Alegeți unitatea pe care doriți să instalați Netrunner\nși apăsați butonul de mai jos pentru a începe"
 
 #: src/installation/automatic.py:93 ui/installation_automatic.ui:176
 msgid "Encryption Password:"
@@ -866,8 +866,8 @@ msgstr "Adăugat la crypttab: %s"
 
 #: src/installation/process.py:764
 #, python-format
-msgid "Added to fstab : /dev/mapper/cryptManjaroHome %s %s %s 0 %s"
-msgstr "Adăugat la fstab: /dev/mapper/cryptManjaroHome %s %s %s 0 %s"
+msgid "Added to fstab : /dev/mapper/cryptNetrunnerHome %s %s %s 0 %s"
+msgstr "Adăugat la fstab: /dev/mapper/cryptNetrunnerHome %s %s %s 0 %s"
 
 #: src/installation/process.py:811
 msgid "Added to fstab : tmpfs /tmp tmpfs defaults,noatime,mode=1777 0 0"
@@ -1100,8 +1100,8 @@ msgid ""
 msgstr "Thus este soft în beta prelansare, în dezvoltare activă. Nu gestionează\ncorect încă RAID, subvolume btrfs sau alte configurații avansate.\nContinuați cu grijă - sunt posibile pierderi de date!\n\nDacă găsiți hibe, raportați-le la <a href='http://bugs.manjaro.org'>http://bugs.manjaro.org</a>"
 
 #: src/language.py:91
-msgid "Welcome to Manjaro!"
-msgstr "Bine ați venit la Manjaro!"
+msgid "Welcome to Netrunner!"
+msgstr "Bine ați venit la Netrunner!"
 
 #: src/language.py:108
 msgid "Languages"
@@ -1227,20 +1227,20 @@ msgid "Couldn't execute auto mirroring selection"
 msgstr "Nu se poate executa autoselecția oglinzilor"
 
 #: src/show_message.py:53
-msgid "Manjaro Installer - Error"
-msgstr "Instalator Manjaro - Eroare"
+msgid "Netrunner Installer - Error"
+msgstr "Instalator Netrunner - Eroare"
 
 #: src/show_message.py:65
-msgid "Manjaro Installer - Warning"
-msgstr "Instalator Manjaro - Avertizare"
+msgid "Netrunner Installer - Warning"
+msgstr "Instalator Netrunner - Avertizare"
 
 #: src/show_message.py:77
-msgid "Manjaro Installer - Information"
-msgstr "Instalator Manjaro - Informații"
+msgid "Netrunner Installer - Information"
+msgstr "Instalator Netrunner - Informații"
 
 #: src/show_message.py:88
-msgid "Manjaro Installer - Confirmation"
-msgstr "Instalator Manjaro - Confirmare"
+msgid "Netrunner Installer - Question"
+msgstr "Instalator Netrunner - Întrebare"
 
 #: src/slides.py:94 src/slides.py:109
 msgid ""
@@ -1249,8 +1249,8 @@ msgid ""
 msgstr "Instalare completă!\nVreți să reporniți sistemul acum?"
 
 #: src/slides.py:102
-msgid "Installing Manjaro..."
-msgstr "Se instalează Manjaro..."
+msgid "Installing Netrunner..."
+msgstr "Se instalează Netrunner..."
 
 #: src/slides.py:107
 msgid "Please wait..."
@@ -1392,9 +1392,9 @@ msgstr "Folosește o parolă root"
 
 #: src/user_info.py:252
 msgid ""
-"Manjaro will use eCryptfs to encrypt your home directory. Unfortunately, eCryptfs does not handle sparse files well.\n"
+"Netrunner will use eCryptfs to encrypt your home directory. Unfortunately, eCryptfs does not handle sparse files well.\n"
 "\n"
-msgstr "Manjaro va folosi eCryptfs pentru a cripta dosarul vostru /home. Din păcate, eCryptfs nu manipulează bine fișierele împrăștiate.\n\n"
+msgstr "Netrunner va folosi eCryptfs pentru a cripta dosarul vostru /home. Din păcate, eCryptfs nu manipulează bine fișierele împrăștiate.\n\n"
 
 #: src/user_info.py:253
 msgid ""
@@ -1522,9 +1522,9 @@ msgstr "Folosește criptare LUKS:"
 
 #: ui/installation_alongside.ui:16
 msgid ""
-"<span size=\"large\">Choose which OS you want to install Manjaro next "
+"<span size=\"large\">Choose which OS you want to install Netrunner next "
 "to</span>"
-msgstr "<span size=\"large\">Alegeți lângă ce SO doriți să instalați Manjaro</span>"
+msgstr "<span size=\"large\">Alegeți lângă ce SO doriți să instalați Netrunner</span>"
 
 #: ui/installation_alongside.ui:90
 msgid "Choose the new size"
@@ -1535,8 +1535,8 @@ msgid "Other OS"
 msgstr "Alt SO"
 
 #: ui/installation_alongside.ui:169
-msgid "Manjaro"
-msgstr "Manjaro"
+msgid "Netrunner"
+msgstr "Netrunner"
 
 #: ui/installation_alongside.ui:193 ui/installation_alongside.ui:205
 #: ui/slides.ui:74
@@ -1550,8 +1550,8 @@ msgid ""
 msgstr "<span weight=\"light\" size=\"small\">Atenție: Aceasta va șterge toate programele, documentele, pozele, muzica și orice alte fișiere de pe disc</span>"
 
 #: ui/installation_ask.ui:70
-msgid "Encrypts the new Manjaro installation for better security"
-msgstr "Criptează noua instalare Manjaro pentru securitate"
+msgid "Encrypts the new Netrunner installation for better security"
+msgstr "Criptează noua instalare Netrunner pentru securitate"
 
 #: ui/installation_ask.ui:91
 msgid ""
@@ -1560,8 +1560,8 @@ msgid ""
 msgstr "<span weight=\"light\" size=\"small\">Veți fi întrebat de cheia de criptare în următorul pas</span>"
 
 #: ui/installation_ask.ui:102
-msgid "Use LVM with the new Manjaro installation"
-msgstr "Utilizează LVM cu noua instalare Manjaro"
+msgid "Use LVM with the new Netrunner installation"
+msgstr "Utilizează LVM cu noua instalare Netrunner"
 
 #: ui/installation_ask.ui:123
 msgid ""
@@ -1582,20 +1582,20 @@ msgstr "Instalează lângă alte SO"
 #: ui/installation_ask.ui:192
 msgid ""
 "<span weight=\"light\" size=\"small\">With this option you will be "
-"installing Manjaro alongside one of the other OSes you already have "
+"installing Netrunner alongside one of the other OSes you already have "
 "installed.</span>"
-msgstr "<span weight=\"light\" size=\"small\">Cu această opțiune veți instala Manjaro lângă alte SO deja instalate.</span>"
+msgstr "<span weight=\"light\" size=\"small\">Cu această opțiune veți instala Netrunner lângă alte SO deja instalate.</span>"
 
 #: ui/installation_ask.ui:204
-msgid "Manage your partitions and choose where to install Manjaro (advanced)"
-msgstr "Gestionați partițiile și alegeți unde va fi instalat Manjaro (avansat)"
+msgid "Manage your partitions and choose where to install Netrunner (advanced)"
+msgstr "Gestionați partițiile și alegeți unde va fi instalat Netrunner (avansat)"
 
 #: ui/installation_ask.ui:230
 msgid ""
 "<span weight=\"light\" size=\"small\">You will be able to create/delete "
-"partitions, choose where to install Manjaro and also choose additional mount"
+"partitions, choose where to install Netrunner and also choose additional mount"
 " points.</span>"
-msgstr "<span weight=\"light\" size=\"small\">Veți putea să creați/ștergeți partiții, să alegeți unde se instalează Manjaro și să alegeți puncte de montare adiționale.</span>"
+msgstr "<span weight=\"light\" size=\"small\">Veți putea să creați/ștergeți partiții, să alegeți unde se instalează Netrunner și să alegeți puncte de montare adiționale.</span>"
 
 #: ui/installation_automatic.ui:38
 msgid ""
@@ -1617,8 +1617,8 @@ msgid ""
 msgstr "<span weight='bold'>Observație: Instalatorul Thus este în beta.</span>\n\nThus este soft în beta prelansare, în dezvoltare activă. \nNu gestionează corect încă RAID, subvolume btrfs sau alte configurații avansate. Continuați cu grijă - sunt posibile pierderi de date! \n\nDacă găsiți hibe, raportați-le la <a href='http://bugs.manjaro.org'>http://bugs.manjaro.org</a>"
 
 #: ui/thus.ui:37
-msgid "<span weight=\"bold\" size=\"large\">Welcome to Manjaro</span>"
-msgstr "<span weight=\"bold\" size=\"large\">Bine ați venit la Manjaro</span>"
+msgid "<span weight=\"bold\" size=\"large\">Welcome to Netrunner</span>"
+msgstr "<span weight=\"bold\" size=\"large\">Bine ați venit la Netrunner</span>"
 
 #: ui/user_info.ui:119 ui/user_info.ui:589
 msgid "<small><span color=\"darkgreen\">Strong password</span></small>"

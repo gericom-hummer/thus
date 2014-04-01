@@ -6,6 +6,7 @@
 #  This file was forked from Cnchi (graphical installer from Antergos)
 #  Check it at https://github.com/antergos
 #
+#  Copyright 2014 Netrunner (http://netrunner-os.com)
 #  Copyright 2013 Antergos (http://antergos.com/)
 #  Copyright 2013 Manjaro (http://manjaro.org)
 #
@@ -139,11 +140,11 @@ class InstallationAlongside(Gtk.Box):
             return False
 
     def translate_ui(self):
-        txt = _("Choose which OS you want to install Manjaro next to")
+        txt = _("Choose which OS you want to install Netrunner next to")
         txt = '<span size="large">%s</span>' % txt
         self.label.set_markup(txt)
 
-        txt = _("Manjaro alongside another OS")
+        txt = _("Netrunner alongside another OS")
         txt = "<span weight='bold' size='large'>%s</span>" % txt
         self.title.set_markup(txt)
 
@@ -287,7 +288,7 @@ class InstallationAlongside(Gtk.Box):
 
         slider = self.ui.get_object("scale")
 
-        # leave space for Manjaro
+        # leave space for Netrunner
         self.available_slider_range = [self.min_size, self.max_size - MIN_ROOT_SIZE]
 
         slider.set_fill_level(self.min_size)
@@ -302,7 +303,7 @@ class InstallationAlongside(Gtk.Box):
         label_other_os.set_markup(txt)
 
         label_manjaro = self.ui.get_object("label_manjaro")
-        txt = "<span weight='bold' size='large'>Manjaro</span>"
+        txt = "<span weight='bold' size='large'>Netrunner</span>"
         label_manjaro.set_markup(txt)
 
         self.update_ask_shrink_size_labels(self.min_size)

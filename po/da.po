@@ -45,8 +45,8 @@ msgid "Thus installer version %s"
 msgstr "Thus-installationsprogram version %s"
 
 #: thus.py:234
-msgid "Manjaro Installer"
-msgstr "Installationsprogram for Manjaro"
+msgid "Netrunner Installer"
+msgstr "Installationsprogram for Netrunner"
 
 #: thus.py:290
 msgid "Quiting installer..."
@@ -491,8 +491,8 @@ msgstr "Thus vil ikke installere en bootloader"
 
 #: src/installation/advanced.py:1860
 #, python-format
-msgid "Manjaro will install the bootloader of type %s in %s"
-msgstr "Manjaro vil installere en bootloader af typen %s i %s"
+msgid "Netrunner will install the bootloader of type %s in %s"
+msgstr "Netrunner vil installere en bootloader af typen %s i %s"
 
 #: src/installation/advanced.py:1876 src/installation/alongside.py:512
 #: src/installation/automatic.py:247
@@ -505,12 +505,12 @@ msgid "Can't load %s css"
 msgstr "Kan ikke indlæse %s css"
 
 #: src/installation/alongside.py:142
-msgid "Choose which OS you want to install Manjaro next to"
-msgstr "Vælg. hvilket OS du ønsker at installere Manjaro sammen med"
+msgid "Choose which OS you want to install Netrunner next to"
+msgstr "Vælg. hvilket OS du ønsker at installere Netrunner sammen med"
 
 #: src/installation/alongside.py:146
-msgid "Manjaro alongside another OS"
-msgstr "Manjaro sammen med andet OS"
+msgid "Netrunner alongside another OS"
+msgstr "Netrunner sammen med andet OS"
 
 #: src/installation/alongside.py:175
 msgid "Detected OS"
@@ -564,8 +564,8 @@ msgid "Installation type"
 msgstr "Installationstype"
 
 #: src/installation/ask.py:113 ui/installation_ask.ui:34
-msgid "Erase disk and install Manjaro (automatic)"
-msgstr "Slet disk og installer Manjaro (automatisk)"
+msgid "Erase disk and install Netrunner (automatic)"
+msgstr "Slet disk og installer Netrunner (automatisk)"
 
 #: src/installation/ask.py:116
 msgid "Warning: This will delete all data on your disk"
@@ -600,34 +600,34 @@ msgstr "Dette vil opsætte din /home-mappe på en anden partition eller enhed."
 
 #: src/installation/ask.py:152 src/installation/ask.py:154
 #, python-format
-msgid "Install Manjaro alongside %s"
-msgstr "Installer Manjaro ved siden af %s"
+msgid "Install Netrunner alongside %s"
+msgstr "Installer Netrunner ved siden af %s"
 
 #: src/installation/ask.py:161
-msgid "Manage your partitions and where to install Manjaro (advanced)"
-msgstr "Opsæt dine partitioner og vælg hvor du ønsker at installere Manjaro (avanceret)"
+msgid "Manage your partitions and where to install Netrunner (advanced)"
+msgstr "Opsæt dine partitioner og vælg hvor du ønsker at installere Netrunner (avanceret)"
 
 #: src/installation/ask.py:164
 msgid ""
 "You will be able to create/delete partitions, choose where to install "
-"Manjaro and also choose additional mount points."
-msgstr "Du vil kunne oprette/slette partitioner, vælge hvor du ønsker at installere Manjaro og også vælge yderligere monteringspunkter."
+"Netrunner and also choose additional mount points."
+msgstr "Du vil kunne oprette/slette partitioner, vælge hvor du ønsker at installere Netrunner og også vælge yderligere monteringspunkter."
 
 #: src/installation/ask.py:190
-msgid "Manjaro installation will be encrypted using LUKS"
-msgstr "Manjaro-installationen vil blive krypteret ved hjælp af LUKS"
+msgid "Netrunner installation will be encrypted using LUKS"
+msgstr "Netrunner-installationen vil blive krypteret ved hjælp af LUKS"
 
 #: src/installation/ask.py:193
-msgid "Manjaro will be installed using LVM volumes"
-msgstr "Manjaro vil blive installeret med en LVM-opsætning"
+msgid "Netrunner will be installed using LVM volumes"
+msgstr "Netrunner vil blive installeret med en LVM-opsætning"
 
 #: src/installation/ask.py:195
-msgid "Manjaro will be installed using a separate /home volume."
-msgstr "Manjaro vil blive installeret med en separat enhed til /home."
+msgid "Netrunner will be installed using a separate /home volume."
+msgstr "Netrunner vil blive installeret med en separat enhed til /home."
 
 #: src/installation/ask.py:197
-msgid "Manjaro will be installed using a separate /home partition."
-msgstr "Manjaro vil blive installeret med en separat /home-partition."
+msgid "Netrunner will be installed using a separate /home partition."
+msgstr "Netrunner vil blive installeret med en separat /home-partition."
 
 #: src/installation/automatic.py:75
 msgid "Automatic installation mode"
@@ -644,9 +644,9 @@ msgstr "Advarsel! Denne installationsform overskriver alt på din harddisk!"
 
 #: src/installation/automatic.py:88 ui/installation_automatic.ui:59
 msgid ""
-"Please choose the drive where you want to install Manjaro\n"
+"Please choose the drive where you want to install Netrunner\n"
 "and click the button below to start the process."
-msgstr "Vælg drevet, hvor du ønsker at installere Manjaro,\nog klik nedenfor for at starte installationen."
+msgstr "Vælg drevet, hvor du ønsker at installere Netrunner,\nog klik nedenfor for at starte installationen."
 
 #: src/installation/automatic.py:93 ui/installation_automatic.ui:176
 msgid "Encryption Password:"
@@ -863,8 +863,8 @@ msgstr "Tilføjet til crypttab : %s"
 
 #: src/installation/process.py:764
 #, python-format
-msgid "Added to fstab : /dev/mapper/cryptManjaroHome %s %s %s 0 %s"
-msgstr "Tilføjet til fstab : /dev/mapper/cryptManjaroHome %s %s %s 0 %s"
+msgid "Added to fstab : /dev/mapper/cryptNetrunnerHome %s %s %s 0 %s"
+msgstr "Tilføjet til fstab : /dev/mapper/cryptNetrunnerHome %s %s %s 0 %s"
 
 #: src/installation/process.py:811
 msgid "Added to fstab : tmpfs /tmp tmpfs defaults,noatime,mode=1777 0 0"
@@ -1097,8 +1097,8 @@ msgid ""
 msgstr "Thus er beta-software, som er under aktiv udvikling.\nDen håndterer endnu ikke RAID, btrfs-underenheder eller andre\navancerede opsætninger. Fortsæt med forsigtighed, da datatab er en mulighed!\n\nHvis du finder fejl, bedes du oplyse dem på <a href='http://bugs.manjaro.org'>http://bugs.manjaro.org</a>"
 
 #: src/language.py:91
-msgid "Welcome to Manjaro!"
-msgstr "Velkommen til Manjaro!"
+msgid "Welcome to Netrunner!"
+msgstr "Velkommen til Netrunner!"
 
 #: src/language.py:108
 msgid "Languages"
@@ -1224,20 +1224,20 @@ msgid "Couldn't execute auto mirroring selection"
 msgstr "Kunne ikke køre automatisk valg af filspejle"
 
 #: src/show_message.py:53
-msgid "Manjaro Installer - Error"
-msgstr "Manjaro Installer - Fejl"
+msgid "Netrunner Installer - Error"
+msgstr "Netrunner Installer - Fejl"
 
 #: src/show_message.py:65
-msgid "Manjaro Installer - Warning"
-msgstr "Manjaro Installer - Advarsel"
+msgid "Netrunner Installer - Warning"
+msgstr "Netrunner Installer - Advarsel"
 
 #: src/show_message.py:77
-msgid "Manjaro Installer - Information"
-msgstr "Manjaro Installer - Information"
+msgid "Netrunner Installer - Information"
+msgstr "Netrunner Installer - Information"
 
 #: src/show_message.py:88
-msgid "Manjaro Installer - Confirmation"
-msgstr "Manjaro installationsprogram - bekræftelse"
+msgid "Netrunner Installer - Question"
+msgstr "Netrunner Installer - Spørgsmål"
 
 #: src/slides.py:94 src/slides.py:109
 msgid ""
@@ -1246,8 +1246,8 @@ msgid ""
 msgstr "Installationen er fuldført!\nØnsker du at genstarte dit system nu?"
 
 #: src/slides.py:102
-msgid "Installing Manjaro..."
-msgstr "Installerer Manjaro..."
+msgid "Installing Netrunner..."
+msgstr "Installerer Netrunner..."
 
 #: src/slides.py:107
 msgid "Please wait..."
@@ -1389,9 +1389,9 @@ msgstr "Anvend root-adgangskode"
 
 #: src/user_info.py:252
 msgid ""
-"Manjaro will use eCryptfs to encrypt your home directory. Unfortunately, eCryptfs does not handle sparse files well.\n"
+"Netrunner will use eCryptfs to encrypt your home directory. Unfortunately, eCryptfs does not handle sparse files well.\n"
 "\n"
-msgstr "Manjaro vil anvende eCryptfs til at kryptere din home-mappe. Beklageligvis er eCryptfs ikke god til at håndtere alrige spredte filer.\n"
+msgstr "Netrunner vil anvende eCryptfs til at kryptere din home-mappe. Beklageligvis er eCryptfs ikke god til at håndtere alrige spredte filer.\n"
 
 #: src/user_info.py:253
 msgid ""
@@ -1519,9 +1519,9 @@ msgstr "Anvend LUKS-kryptering:"
 
 #: ui/installation_alongside.ui:16
 msgid ""
-"<span size=\"large\">Choose which OS you want to install Manjaro next "
+"<span size=\"large\">Choose which OS you want to install Netrunner next "
 "to</span>"
-msgstr "<span size=\"large\">Vælg det OS, du ønsker at installere Manjaro sammen med</span>"
+msgstr "<span size=\"large\">Vælg det OS, du ønsker at installere Netrunner sammen med</span>"
 
 #: ui/installation_alongside.ui:90
 msgid "Choose the new size"
@@ -1532,8 +1532,8 @@ msgid "Other OS"
 msgstr "Andet OS"
 
 #: ui/installation_alongside.ui:169
-msgid "Manjaro"
-msgstr "Manjaro"
+msgid "Netrunner"
+msgstr "Netrunner"
 
 #: ui/installation_alongside.ui:193 ui/installation_alongside.ui:205
 #: ui/slides.ui:74
@@ -1547,8 +1547,8 @@ msgid ""
 msgstr "<span weight=\"light\" size=\"small\">Advarsel: Dette vil slette alle programmer, dokumenter, fotos, musik og alle andre filer på din disk</span>"
 
 #: ui/installation_ask.ui:70
-msgid "Encrypts the new Manjaro installation for better security"
-msgstr "Krypter den nye Manjaro-installation for større sikkerhed"
+msgid "Encrypts the new Netrunner installation for better security"
+msgstr "Krypter den nye Netrunner-installation for større sikkerhed"
 
 #: ui/installation_ask.ui:91
 msgid ""
@@ -1557,8 +1557,8 @@ msgid ""
 msgstr "<span weight=\"light\" size=\"small\">Du vil blive bedt om en krypteringsnøgle ved næste skridt</span>"
 
 #: ui/installation_ask.ui:102
-msgid "Use LVM with the new Manjaro installation"
-msgstr "Brug LVM med den nye Manjaro-installation"
+msgid "Use LVM with the new Netrunner installation"
+msgstr "Brug LVM med den nye Netrunner-installation"
 
 #: ui/installation_ask.ui:123
 msgid ""
@@ -1579,20 +1579,20 @@ msgstr "Installer ved siden af andre OS'er"
 #: ui/installation_ask.ui:192
 msgid ""
 "<span weight=\"light\" size=\"small\">With this option you will be "
-"installing Manjaro alongside one of the other OSes you already have "
+"installing Netrunner alongside one of the other OSes you already have "
 "installed.</span>"
-msgstr "<span weight=\"light\" size=\"small\">På denne måde vil du installere Manjaro ved siden af et af de andre OS'er, du allerede har installeret.</span>"
+msgstr "<span weight=\"light\" size=\"small\">På denne måde vil du installere Netrunner ved siden af et af de andre OS'er, du allerede har installeret.</span>"
 
 #: ui/installation_ask.ui:204
-msgid "Manage your partitions and choose where to install Manjaro (advanced)"
-msgstr "Opsæt dine partitioner og vælg, hvor du ønsker at installere Manjaro (avanceret)"
+msgid "Manage your partitions and choose where to install Netrunner (advanced)"
+msgstr "Opsæt dine partitioner og vælg, hvor du ønsker at installere Netrunner (avanceret)"
 
 #: ui/installation_ask.ui:230
 msgid ""
 "<span weight=\"light\" size=\"small\">You will be able to create/delete "
-"partitions, choose where to install Manjaro and also choose additional mount"
+"partitions, choose where to install Netrunner and also choose additional mount"
 " points.</span>"
-msgstr "<span weight=\"light\" size=\"small\">Her vil du kunne oprette/slette partitioner, vælge hvor du ønsker at installere Manjaro og også vælge yderligere monteringspunkter.</span>"
+msgstr "<span weight=\"light\" size=\"small\">Her vil du kunne oprette/slette partitioner, vælge hvor du ønsker at installere Netrunner og også vælge yderligere monteringspunkter.</span>"
 
 #: ui/installation_automatic.ui:38
 msgid ""
@@ -1614,8 +1614,8 @@ msgid ""
 msgstr "<span weight='bold'>Bemærk:Thus-installeren er beta-software.</span>\n\nDette er beta-software i pre-release-stadiet, som er under aktiv udvikling. Den håndterer endnu ikke RAID, btrfs-underenheder eller andre avancerede opsætninger. Fortsæt med forsigtighed, da datatab er en mulighed!\n\nHvis du finder fejl, bedes du besøge <a href='http://bugs.manjaro.org'>http://bugs.manjaro.org</a>"
 
 #: ui/thus.ui:37
-msgid "<span weight=\"bold\" size=\"large\">Welcome to Manjaro</span>"
-msgstr "<span weight=\"bold\" size=\"large\">Velkommen til Manjaro</span>"
+msgid "<span weight=\"bold\" size=\"large\">Welcome to Netrunner</span>"
+msgstr "<span weight=\"bold\" size=\"large\">Velkommen til Netrunner</span>"
 
 #: ui/user_info.ui:119 ui/user_info.ui:589
 msgid "<small><span color=\"darkgreen\">Strong password</span></small>"

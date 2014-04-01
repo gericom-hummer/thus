@@ -50,7 +50,7 @@ def error(message):
                                    destroy_with_parent=True,
                                    message_type=Gtk.MessageType.ERROR,
                                    buttons=Gtk.ButtonsType.CLOSE,
-                                   text=_("Manjaro Installer - Error"))
+                                   text=_("Netrunner Installer - Error"))
     msg_dialog.format_secondary_text(message)
     msg_dialog.run()
     msg_dialog.destroy()
@@ -62,7 +62,7 @@ def warning(message):
                                    destroy_with_parent=True,
                                    message_type=Gtk.MessageType.WARNING,
                                    buttons=Gtk.ButtonsType.CLOSE,
-                                   text=_("Manjaro Installer - Warning"))
+                                   text=_("Netrunner Installer - Warning"))
     msg_dialog.format_secondary_text(message)
     msg_dialog.run()
     msg_dialog.destroy()
@@ -74,7 +74,7 @@ def message(message):
                                    destroy_with_parent=True,
                                    message_type=Gtk.MessageType.INFO,
                                    buttons=Gtk.ButtonsType.CLOSE,
-                                   text=_("Manjaro Installer - Information"))
+                                   text=_("Netrunner Installer - Information"))
     msg_dialog.format_secondary_text(message)
     msg_dialog.run()
 
@@ -85,7 +85,7 @@ def question(message):
                                    destroy_with_parent=True,
                                    message_type=Gtk.MessageType.QUESTION,
                                    buttons=Gtk.ButtonsType.YES_NO,
-                                   text=_("Manjaro Installer - Confirmation"))
+                                   text=_("Netrunner Installer - Question"))
     msg_dialog.format_secondary_text(message)
     response = msg_dialog.run()
     msg_dialog.destroy()

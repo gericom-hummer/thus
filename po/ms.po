@@ -46,8 +46,8 @@ msgid "Thus installer version %s"
 msgstr "Pemasang Thus versi %s"
 
 #: thus.py:234
-msgid "Manjaro Installer"
-msgstr "Pemasang Manjaro"
+msgid "Netrunner Installer"
+msgstr "Pemasang Netrunner"
 
 #: thus.py:290
 msgid "Quiting installer..."
@@ -492,8 +492,8 @@ msgstr ""
 
 #: src/installation/advanced.py:1860
 #, python-format
-msgid "Manjaro will install the bootloader of type %s in %s"
-msgstr "Manjaro akan memasang pemuatboot jenis %s di %s"
+msgid "Netrunner will install the bootloader of type %s in %s"
+msgstr "Netrunner akan memasang pemuatboot jenis %s di %s"
 
 #: src/installation/advanced.py:1876 src/installation/alongside.py:512
 #: src/installation/automatic.py:247
@@ -506,12 +506,12 @@ msgid "Can't load %s css"
 msgstr "Tidak boleh memuat %s css"
 
 #: src/installation/alongside.py:142
-msgid "Choose which OS you want to install Manjaro next to"
-msgstr "Pilih anda selepas OS mana anda mahu pasangkan Manjaro"
+msgid "Choose which OS you want to install Netrunner next to"
+msgstr "Pilih anda selepas OS mana anda mahu pasangkan Netrunner"
 
 #: src/installation/alongside.py:146
-msgid "Manjaro alongside another OS"
-msgstr "Manjaro bersama OS lain"
+msgid "Netrunner alongside another OS"
+msgstr "Netrunner bersama OS lain"
 
 #: src/installation/alongside.py:175
 msgid "Detected OS"
@@ -565,8 +565,8 @@ msgid "Installation type"
 msgstr "Jenis Pemasangan"
 
 #: src/installation/ask.py:113 ui/installation_ask.ui:34
-msgid "Erase disk and install Manjaro (automatic)"
-msgstr "Padam cakera dan pasang Manjaro (automatik)"
+msgid "Erase disk and install Netrunner (automatic)"
+msgstr "Padam cakera dan pasang Netrunner (automatik)"
 
 #: src/installation/ask.py:116
 msgid "Warning: This will delete all data on your disk"
@@ -601,33 +601,33 @@ msgstr ""
 
 #: src/installation/ask.py:152 src/installation/ask.py:154
 #, python-format
-msgid "Install Manjaro alongside %s"
-msgstr "Memasang Manjaro bersama %s"
+msgid "Install Netrunner alongside %s"
+msgstr "Memasang Netrunner bersama %s"
 
 #: src/installation/ask.py:161
-msgid "Manage your partitions and where to install Manjaro (advanced)"
-msgstr "Mengurus sekatan anda dan memilih dimana untuk memasang Manjaro (lanjutan)"
+msgid "Manage your partitions and where to install Netrunner (advanced)"
+msgstr "Mengurus sekatan anda dan memilih dimana untuk memasang Netrunner (lanjutan)"
 
 #: src/installation/ask.py:164
 msgid ""
 "You will be able to create/delete partitions, choose where to install "
-"Manjaro and also choose additional mount points."
+"Netrunner and also choose additional mount points."
 msgstr ""
 
 #: src/installation/ask.py:190
-msgid "Manjaro installation will be encrypted using LUKS"
+msgid "Netrunner installation will be encrypted using LUKS"
 msgstr ""
 
 #: src/installation/ask.py:193
-msgid "Manjaro will be installed using LVM volumes"
+msgid "Netrunner will be installed using LVM volumes"
 msgstr ""
 
 #: src/installation/ask.py:195
-msgid "Manjaro will be installed using a separate /home volume."
+msgid "Netrunner will be installed using a separate /home volume."
 msgstr ""
 
 #: src/installation/ask.py:197
-msgid "Manjaro will be installed using a separate /home partition."
+msgid "Netrunner will be installed using a separate /home partition."
 msgstr ""
 
 #: src/installation/automatic.py:75
@@ -645,9 +645,9 @@ msgstr "AMARAN! Mod pemasangan ini akan menulis ganti kesemuanya di pemacu anda!
 
 #: src/installation/automatic.py:88 ui/installation_automatic.ui:59
 msgid ""
-"Please choose the drive where you want to install Manjaro\n"
+"Please choose the drive where you want to install Netrunner\n"
 "and click the button below to start the process."
-msgstr "Sila pilih pemacu untuk memasang Manjaro /n\ndan klik butang dibawah untuk memulakan proses."
+msgstr "Sila pilih pemacu untuk memasang Netrunner /n\ndan klik butang dibawah untuk memulakan proses."
 
 #: src/installation/automatic.py:93 ui/installation_automatic.ui:176
 msgid "Encryption Password:"
@@ -864,7 +864,7 @@ msgstr ""
 
 #: src/installation/process.py:764
 #, python-format
-msgid "Added to fstab : /dev/mapper/cryptManjaroHome %s %s %s 0 %s"
+msgid "Added to fstab : /dev/mapper/cryptNetrunnerHome %s %s %s 0 %s"
 msgstr ""
 
 #: src/installation/process.py:811
@@ -1098,8 +1098,8 @@ msgid ""
 msgstr "Thus adalah perisian pra-keluaran beta sedang dalam pembinaan.\nIa masih belum boleh mengendalikan RADI, btrfs subvolumes, atau \nlain-lain tetapan lanjut dengan betul. Sila teruskan dengan berhati-hati \nkerana kehilangan data mungkin boleh berlaku!.\nJika anda menjumpai sebarang pepijat, kunjungi <a href='http://bugs.manjaro.org'>http://bugs.manjaro.org</a>"
 
 #: src/language.py:91
-msgid "Welcome to Manjaro!"
-msgstr "Selamat Datang ke Manjaro!"
+msgid "Welcome to Netrunner!"
+msgstr "Selamat Datang ke Netrunner!"
 
 #: src/language.py:108
 msgid "Languages"
@@ -1225,20 +1225,20 @@ msgid "Couldn't execute auto mirroring selection"
 msgstr "Tidak dapat melaksanakan pemilihan pencerminan auto"
 
 #: src/show_message.py:53
-msgid "Manjaro Installer - Error"
-msgstr "Pemasang Manjaro - Ralat"
+msgid "Netrunner Installer - Error"
+msgstr "Pemasang Netrunner - Ralat"
 
 #: src/show_message.py:65
-msgid "Manjaro Installer - Warning"
-msgstr "Pemasang Manjaro - Amaran"
+msgid "Netrunner Installer - Warning"
+msgstr "Pemasang Netrunner - Amaran"
 
 #: src/show_message.py:77
-msgid "Manjaro Installer - Information"
-msgstr "Pemasang Manjaro - Informasi"
+msgid "Netrunner Installer - Information"
+msgstr "Pemasang Netrunner - Informasi"
 
 #: src/show_message.py:88
-msgid "Manjaro Installer - Confirmation"
-msgstr ""
+msgid "Netrunner Installer - Question"
+msgstr "Pemasang Netrunner - Soalan"
 
 #: src/slides.py:94 src/slides.py:109
 msgid ""
@@ -1247,8 +1247,8 @@ msgid ""
 msgstr "Pemasangan selesai! /n\nAdakah anda ingin untuk memulakan semula sistem anda sekarang?"
 
 #: src/slides.py:102
-msgid "Installing Manjaro..."
-msgstr "Memasang Manjaro..."
+msgid "Installing Netrunner..."
+msgstr "Memasang Netrunner..."
 
 #: src/slides.py:107
 msgid "Please wait..."
@@ -1390,9 +1390,9 @@ msgstr ""
 
 #: src/user_info.py:252
 msgid ""
-"Manjaro will use eCryptfs to encrypt your home directory. Unfortunately, eCryptfs does not handle sparse files well.\n"
+"Netrunner will use eCryptfs to encrypt your home directory. Unfortunately, eCryptfs does not handle sparse files well.\n"
 "\n"
-msgstr "Manjaro akan menggunakan eCryptfs untuk menyulitkan direktori home anda. Malangnya eCryptfs tidak mengendalikan fail jarang dengan baik. /n\n/n\n"
+msgstr "Netrunner akan menggunakan eCryptfs untuk menyulitkan direktori home anda. Malangnya eCryptfs tidak mengendalikan fail jarang dengan baik. /n\n/n\n"
 
 #: src/user_info.py:253
 msgid ""
@@ -1520,9 +1520,9 @@ msgstr "Guna penyulitan LUKS:"
 
 #: ui/installation_alongside.ui:16
 msgid ""
-"<span size=\"large\">Choose which OS you want to install Manjaro next "
+"<span size=\"large\">Choose which OS you want to install Netrunner next "
 "to</span>"
-msgstr "<span size=\"large\">Pilih anda selepas OS mana anda mahu pasangkan Manjaro</span>"
+msgstr "<span size=\"large\">Pilih anda selepas OS mana anda mahu pasangkan Netrunner</span>"
 
 #: ui/installation_alongside.ui:90
 msgid "Choose the new size"
@@ -1533,8 +1533,8 @@ msgid "Other OS"
 msgstr "OS lain"
 
 #: ui/installation_alongside.ui:169
-msgid "Manjaro"
-msgstr "Manjaro"
+msgid "Netrunner"
+msgstr "Netrunner"
 
 #: ui/installation_alongside.ui:193 ui/installation_alongside.ui:205
 #: ui/slides.ui:74
@@ -1548,8 +1548,8 @@ msgid ""
 msgstr "<span weight=\"light\" size=\"small\">Amaran: Ini akan memadam semua program, dokumen, foto, musik dan semua fail lain pada cakera anda</span>"
 
 #: ui/installation_ask.ui:70
-msgid "Encrypts the new Manjaro installation for better security"
-msgstr "Sulitkan pemasangan baharu Manjaro untuk lebih selamat"
+msgid "Encrypts the new Netrunner installation for better security"
+msgstr "Sulitkan pemasangan baharu Netrunner untuk lebih selamat"
 
 #: ui/installation_ask.ui:91
 msgid ""
@@ -1558,8 +1558,8 @@ msgid ""
 msgstr "<span weight=\"light\" size=\"small\">Anda akan diminta kekunci penyulitan pada langkah seterusnya</span>"
 
 #: ui/installation_ask.ui:102
-msgid "Use LVM with the new Manjaro installation"
-msgstr "Guna LVM dengan pemasangan baharu Manjaro"
+msgid "Use LVM with the new Netrunner installation"
+msgstr "Guna LVM dengan pemasangan baharu Netrunner"
 
 #: ui/installation_ask.ui:123
 msgid ""
@@ -1580,20 +1580,20 @@ msgstr "Memasang bersama OS lain"
 #: ui/installation_ask.ui:192
 msgid ""
 "<span weight=\"light\" size=\"small\">With this option you will be "
-"installing Manjaro alongside one of the other OSes you already have "
+"installing Netrunner alongside one of the other OSes you already have "
 "installed.</span>"
-msgstr "<span weight=\"light\" size=\"small\">Dengan pilihan ini anda memasang Manjaro bersama-sama dengan OS lain yang anda telah pasang.</span>"
+msgstr "<span weight=\"light\" size=\"small\">Dengan pilihan ini anda memasang Netrunner bersama-sama dengan OS lain yang anda telah pasang.</span>"
 
 #: ui/installation_ask.ui:204
-msgid "Manage your partitions and choose where to install Manjaro (advanced)"
-msgstr "Mengurus sekatan anda dan memilih dimana untuk memasang Manjaro (lanjutan)"
+msgid "Manage your partitions and choose where to install Netrunner (advanced)"
+msgstr "Mengurus sekatan anda dan memilih dimana untuk memasang Netrunner (lanjutan)"
 
 #: ui/installation_ask.ui:230
 msgid ""
 "<span weight=\"light\" size=\"small\">You will be able to create/delete "
-"partitions, choose where to install Manjaro and also choose additional mount"
+"partitions, choose where to install Netrunner and also choose additional mount"
 " points.</span>"
-msgstr "<span weight=\"light\" size=\"small\">Anda boleh mencipta/memadam sekatan, memilih dimana untuk memasang Manjaro dan memilih titik lekap tambahan</span>"
+msgstr "<span weight=\"light\" size=\"small\">Anda boleh mencipta/memadam sekatan, memilih dimana untuk memasang Netrunner dan memilih titik lekap tambahan</span>"
 
 #: ui/installation_automatic.ui:38
 msgid ""
@@ -1615,8 +1615,8 @@ msgid ""
 msgstr "<span weight='bold'>Nota: Pemasang Thus adalah paerisian beta</span>\n\nThus adalah perisian pra-keluaran beta sedang dalam pembinaan.\nIa masih belum boleh mengendalikan RADI, btrfs subvolumes, atau lain-lain tetapan lanjut dengan betul. Sila teruskan dengan berhati-hati kerana kehilangan data mungkin boleh berlaku!.\n\nJika anda menjumpai sebarang pepijat, kunjungi <a href='http://bugs.manjaro.org'>http://bugs.manjaro.org</a>"
 
 #: ui/thus.ui:37
-msgid "<span weight=\"bold\" size=\"large\">Welcome to Manjaro</span>"
-msgstr "<span weight=\"bold\" size=\"large\">Selamat Datang ke Manjaro</span>"
+msgid "<span weight=\"bold\" size=\"large\">Welcome to Netrunner</span>"
+msgstr "<span weight=\"bold\" size=\"large\">Selamat Datang ke Netrunner</span>"
 
 #: ui/user_info.ui:119 ui/user_info.ui:589
 msgid "<small><span color=\"darkgreen\">Strong password</span></small>"
