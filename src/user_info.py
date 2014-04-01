@@ -6,6 +6,7 @@
 #  This file was forked from Cnchi (graphical installer from Antergos)
 #  Check it at https://github.com/antergos
 #
+#  Copyright 2014 Netrunner (http://netrunner-os.com)
 #  Copyright 2013 Antergos (http://antergos.com/)
 #  Copyright 2013 Manjaro (http://manjaro.org)
 #
@@ -249,7 +250,7 @@ class UserInfo(Gtk.Box):
 
         self.settings.set('encrypt_home', False)
         if self.encrypt_home:
-            m = _("Manjaro will use eCryptfs to encrypt your home directory. Unfortunately, eCryptfs does not handle sparse files well.\n\n")
+            m = _("Netrunner will use eCryptfs to encrypt your home directory. Unfortunately, eCryptfs does not handle sparse files well.\n\n")
             m += _("Don't worry, for most intents and purposes this deficiency does not pose a problem.\n\n")
             m += _("Anyway, one popular and inadvisable application of eCryptfs is to encrypt a BitTorrent download location as this often requires eCryptfs to handle sparse files of 10 GB or more and may lead to intense disk starvation.\n\n")
             m += _("A simple workaround is to place sparse files in an unencrypted .Public directory\n\n")

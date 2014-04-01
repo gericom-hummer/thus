@@ -49,8 +49,8 @@ msgid "Thus installer version %s"
 msgstr "Thus telepítő verzió %s"
 
 #: thus.py:234
-msgid "Manjaro Installer"
-msgstr "Manjaro Telepítő"
+msgid "Netrunner Installer"
+msgstr "Netrunner Telepítő"
 
 #: thus.py:290
 msgid "Quiting installer..."
@@ -464,8 +464,8 @@ msgstr "Thus nem fog telepíteni semmilyen rendszerbetöltőt "
 
 #: src/installation/advanced.py:1853
 #, python-format
-msgid "Manjaro will install the bootloader of type %s in %s"
-msgstr "Manjaro telepíteni fogja a rendszerbetöltőt a %s - %s"
+msgid "Netrunner will install the bootloader of type %s in %s"
+msgstr "Netrunner telepíteni fogja a rendszerbetöltőt a %s - %s"
 
 #: src/installation/advanced.py:1869 src/installation/automatic.py:247
 msgid "Testing mode. Thus won't apply any changes to your system!"
@@ -477,12 +477,12 @@ msgid "Can't load %s css"
 msgstr "Nem lehet betölteni %s css"
 
 #: src/installation/alongside.py:142
-msgid "Choose which OS you want to install Manjaro next to"
-msgstr "Válassza ki melyik operációs rendszer mellé telepíti a Manjaro-t"
+msgid "Choose which OS you want to install Netrunner next to"
+msgstr "Válassza ki melyik operációs rendszer mellé telepíti a Netrunner-t"
 
 #: src/installation/alongside.py:146
-msgid "Manjaro alongside another OS"
-msgstr "Manjaro telepítése meglévő operációs rendszer mellé"
+msgid "Netrunner alongside another OS"
+msgstr "Netrunner telepítése meglévő operációs rendszer mellé"
 
 #: src/installation/alongside.py:175
 msgid "Detected OS"
@@ -518,8 +518,8 @@ msgid "Installation type"
 msgstr "Telepítés típusa"
 
 #: src/installation/ask.py:113 ui/installation_ask.ui:34
-msgid "Erase disk and install Manjaro (automatic)"
-msgstr "Lemez törlése és Manjaro telepítése (automatikus)"
+msgid "Erase disk and install Netrunner (automatic)"
+msgstr "Lemez törlése és Netrunner telepítése (automatikus)"
 
 #: src/installation/ask.py:116
 msgid "Warning: This will delete all data on your disk"
@@ -554,34 +554,34 @@ msgstr "Ez beállítja a /home könyvtárat egy másik partícióra vagy kötetr
 
 #: src/installation/ask.py:152 src/installation/ask.py:154
 #, python-format
-msgid "Install Manjaro alongside %s"
-msgstr "Manjaro telepítése %s mellé"
+msgid "Install Netrunner alongside %s"
+msgstr "Netrunner telepítése %s mellé"
 
 #: src/installation/ask.py:161
-msgid "Manage your partitions and where to install Manjaro (advanced)"
-msgstr "Partíciók kezelése és Manjaro telepítési helyének kiválasztása. (haladó)"
+msgid "Manage your partitions and where to install Netrunner (advanced)"
+msgstr "Partíciók kezelése és Netrunner telepítési helyének kiválasztása. (haladó)"
 
 #: src/installation/ask.py:164
 msgid ""
 "You will be able to create/delete partitions, choose where to install "
-"Manjaro and also choose additional mount points."
-msgstr "Létrehozhat, törölhet partíciókat. Válassza ki hova települjön a Manjaro és válasszon csatolási pontokat."
+"Netrunner and also choose additional mount points."
+msgstr "Létrehozhat, törölhet partíciókat. Válassza ki hova települjön a Netrunner és válasszon csatolási pontokat."
 
 #: src/installation/ask.py:190
-msgid "Manjaro installation will be encrypted using LUKS"
-msgstr "A Manjaro telepítés titkosítva lesz LUKS használatával"
+msgid "Netrunner installation will be encrypted using LUKS"
+msgstr "A Netrunner telepítés titkosítva lesz LUKS használatával"
 
 #: src/installation/ask.py:193
-msgid "Manjaro will be installed using LVM volumes"
-msgstr "Manjaro telepítve lesz LVM kötetek használatával"
+msgid "Netrunner will be installed using LVM volumes"
+msgstr "Netrunner telepítve lesz LVM kötetek használatával"
 
 #: src/installation/ask.py:195
-msgid "Manjaro will be installed using a separate /home volume."
-msgstr "Manjaro telepítve lesz egy különálló /home kötet használatával."
+msgid "Netrunner will be installed using a separate /home volume."
+msgstr "Netrunner telepítve lesz egy különálló /home kötet használatával."
 
 #: src/installation/ask.py:197
-msgid "Manjaro will be installed using a separate /home partition."
-msgstr "Manjaro telepítve lesz egy különálló /home partíció használatával."
+msgid "Netrunner will be installed using a separate /home partition."
+msgstr "Netrunner telepítve lesz egy különálló /home partíció használatával."
 
 #: src/installation/automatic.py:75
 msgid "Automatic installation mode"
@@ -598,9 +598,9 @@ msgstr "FIGYELEM! Ez a telepítési mód mindent felülír a meghajtón!"
 
 #: src/installation/automatic.py:88 ui/installation_automatic.ui:59
 msgid ""
-"Please choose the drive where you want to install Manjaro\n"
+"Please choose the drive where you want to install Netrunner\n"
 "and click the button below to start the process."
-msgstr "Kérem válassza ki a meghajtót ahova telepíteni akarja a Manjaro-t\nés kattintson az alábbi gombra a folyamat megkezdéséhez."
+msgstr "Kérem válassza ki a meghajtót ahova telepíteni akarja a Netrunner-t\nés kattintson az alábbi gombra a folyamat megkezdéséhez."
 
 #: src/installation/automatic.py:93 ui/installation_automatic.ui:176
 msgid "Encryption Password:"
@@ -641,7 +641,7 @@ msgstr "Thus használni fogja a következő telepítési eszközt: %s"
 #: src/installation/automatic.py:222
 #, python-format
 msgid "Thus will install the bootloader of type %s in %s"
-msgstr "Manjaro telepíteni fogja a rendszerbetöltőt a %s - %s"
+msgstr "Netrunner telepíteni fogja a rendszerbetöltőt a %s - %s"
 
 #: src/installation/process.py:84
 #, python-format
@@ -807,8 +807,8 @@ msgstr "Hozzáadva a crypttab-hoz : %s"
 
 #: src/installation/process.py:748
 #, python-format
-msgid "Added to fstab : /dev/mapper/cryptManjaroHome %s %s %s 0 %s"
-msgstr "fstab-hoz adva: /dev/mapper/cryptManjaroHome %s %s %s 0 %s"
+msgid "Added to fstab : /dev/mapper/cryptNetrunnerHome %s %s %s 0 %s"
+msgstr "fstab-hoz adva: /dev/mapper/cryptNetrunnerHome %s %s %s 0 %s"
 
 #: src/installation/process.py:792
 msgid "Added to fstab : tmpfs /tmp tmpfs defaults,noatime,mode=1777 0 0"
@@ -946,7 +946,7 @@ msgstr "Grafikus kártya beállítása..."
 
 #: src/installation/process.py:1428
 msgid "Can't execute the MHWD script"
-msgstr "Nem lehet futtatni az MHWD \"Manjaro Hardware Detection\" scriptet"
+msgstr "Nem lehet futtatni az MHWD \"Netrunner Hardware Detection\" scriptet"
 
 #: src/installation/process.py:1441
 msgid "Configure display manager ..."
@@ -1023,8 +1023,8 @@ msgid ""
 msgstr "Ez egy pre-release béta szoftver, mely még erősen fejlesztés alatt \náll. Még nem kezeli megfelelően a RAID és btrfs alköteteket vagy \nmás fejlett beállításokat. Kérjük, használja óvatosan, mert elvesztheti\nadatait! \n\nHa bármilyen hibát észlel, kérjük jelezze a <a href='http://bugs.manjaro.org'>manjaro.org</a> weboldalon."
 
 #: src/language.py:91
-msgid "Welcome to Manjaro!"
-msgstr "Üdvözli önt a Manjaro!"
+msgid "Welcome to Netrunner!"
+msgstr "Üdvözli önt a Netrunner!"
 
 #: src/language.py:108
 msgid "Languages"
@@ -1145,20 +1145,20 @@ msgid "Couldn't execute auto mirroring selection"
 msgstr "Nem lehetséges az automatikus tükörszerver választást futtatni"
 
 #: src/show_message.py:54
-msgid "Manjaro Installer - Error"
-msgstr "Manjaro telepítő - Hiba"
+msgid "Netrunner Installer - Error"
+msgstr "Netrunner telepítő - Hiba"
 
 #: src/show_message.py:66
-msgid "Manjaro Installer - Warning"
-msgstr "Manjaro telepítő - Figyelmeztetés"
+msgid "Netrunner Installer - Warning"
+msgstr "Netrunner telepítő - Figyelmeztetés"
 
 #: src/show_message.py:78
-msgid "Manjaro Installer - Information"
-msgstr "Manjaro telepítő - Információ"
+msgid "Netrunner Installer - Information"
+msgstr "Netrunner telepítő - Információ"
 
 #: src/show_message.py:89
-msgid "Manjaro Installer - Question"
-msgstr "Manjaro telepítő - Kérdés"
+msgid "Netrunner Installer - Question"
+msgstr "Netrunner telepítő - Kérdés"
 
 #: src/slides.py:94 src/slides.py:109
 msgid ""
@@ -1167,8 +1167,8 @@ msgid ""
 msgstr "A rendszertelepítés befejeződött.\nÚjraindítja a rendszert most?"
 
 #: src/slides.py:102
-msgid "Installing Manjaro..."
-msgstr "Manjaro telepítése..."
+msgid "Installing Netrunner..."
+msgstr "Netrunner telepítése..."
 
 #: src/slides.py:107
 msgid "Please wait..."
@@ -1310,9 +1310,9 @@ msgstr "Használjon root jelszót"
 
 #: src/user_info.py:252
 msgid ""
-"Manjaro will use eCryptfs to encrypt your home directory. Unfortunately, eCryptfs does not handle sparse files well.\n"
+"Netrunner will use eCryptfs to encrypt your home directory. Unfortunately, eCryptfs does not handle sparse files well.\n"
 "\n"
-msgstr "Manjaro az eCryptfs-t használja az ön home könyvtárának a titkosítására. Sajnos az eCryptfs nem kezeli a töredezett fájlokat jól.\n\n"
+msgstr "Netrunner az eCryptfs-t használja az ön home könyvtárának a titkosítására. Sajnos az eCryptfs nem kezeli a töredezett fájlokat jól.\n\n"
 
 #: src/user_info.py:253
 msgid ""
@@ -1440,9 +1440,9 @@ msgstr "Használjon LUKS titkosítást:"
 
 #: ui/installation_alongside.ui:16
 msgid ""
-"<span size=\"large\">Choose which OS you want to install Manjaro next "
+"<span size=\"large\">Choose which OS you want to install Netrunner next "
 "to</span>"
-msgstr "<span size=\"large\">Válassza ki melyik operációs rendszer mellé telepíti a Manjaro-t</span>"
+msgstr "<span size=\"large\">Válassza ki melyik operációs rendszer mellé telepíti a Netrunner-t</span>"
 
 #: ui/installation_alongside.ui:90
 msgid "Choose the new size"
@@ -1453,8 +1453,8 @@ msgid "Other OS"
 msgstr "Egyéb operációs rendszer"
 
 #: ui/installation_alongside.ui:169
-msgid "Manjaro"
-msgstr "Manjaro"
+msgid "Netrunner"
+msgstr "Netrunner"
 
 #: ui/installation_alongside.ui:193 ui/installation_alongside.ui:205
 #: ui/slides.ui:74
@@ -1468,8 +1468,8 @@ msgid ""
 msgstr "<span weight=\"light\" size=\"small\">Figzelem: Ez törölni fogja az összes programot, dokumentumot, fotót, zenét és egyéb fájlokat a merevlemezről</span>"
 
 #: ui/installation_ask.ui:70
-msgid "Encrypts the new Manjaro installation for better security"
-msgstr "A telepített Manjaro titkosítva lesz a jobb biztonság érdekében"
+msgid "Encrypts the new Netrunner installation for better security"
+msgstr "A telepített Netrunner titkosítva lesz a jobb biztonság érdekében"
 
 #: ui/installation_ask.ui:91
 msgid ""
@@ -1478,8 +1478,8 @@ msgid ""
 msgstr "<span weight=\"light\" size=\"small\">A következő lépésben a titkosítási kulcsot kell megadni</span>"
 
 #: ui/installation_ask.ui:102
-msgid "Use LVM with the new Manjaro installation"
-msgstr "Használja az LVM-et az új Manjaro telepítéssel"
+msgid "Use LVM with the new Netrunner installation"
+msgstr "Használja az LVM-et az új Netrunner telepítéssel"
 
 #: ui/installation_ask.ui:123
 msgid ""
@@ -1500,20 +1500,20 @@ msgstr "Telepítse más egyéb operációs rendszerek mellé"
 #: ui/installation_ask.ui:192
 msgid ""
 "<span weight=\"light\" size=\"small\">With this option you will be "
-"installing Manjaro alongside one of the other OSes you already have "
+"installing Netrunner alongside one of the other OSes you already have "
 "installed.</span>"
-msgstr "<span weight=\"light\" size=\"small\">Ezzel az opcióval Manjaro telepítésre kerül más operációs rendszer mellé ami már telepítve van.</span>"
+msgstr "<span weight=\"light\" size=\"small\">Ezzel az opcióval Netrunner telepítésre kerül más operációs rendszer mellé ami már telepítve van.</span>"
 
 #: ui/installation_ask.ui:204
-msgid "Manage your partitions and choose where to install Manjaro (advanced)"
-msgstr "Partíciók kezelése és Manjaro telepítési helyének kiválasztása. (haladó)"
+msgid "Manage your partitions and choose where to install Netrunner (advanced)"
+msgstr "Partíciók kezelése és Netrunner telepítési helyének kiválasztása. (haladó)"
 
 #: ui/installation_ask.ui:230
 msgid ""
 "<span weight=\"light\" size=\"small\">You will be able to create/delete "
-"partitions, choose where to install Manjaro and also choose additional mount"
+"partitions, choose where to install Netrunner and also choose additional mount"
 " points.</span>"
-msgstr "<span weight=\"light\" size=\"small\">Létrehozhat, törölhet partíciókat. Válassza ki hova települjön a Manjaro és válasszon csatolási pontokat.</span>"
+msgstr "<span weight=\"light\" size=\"small\">Létrehozhat, törölhet partíciókat. Válassza ki hova települjön a Netrunner és válasszon csatolási pontokat.</span>"
 
 #: ui/installation_automatic.ui:38
 msgid ""
@@ -1535,8 +1535,8 @@ msgid ""
 msgstr "<span weight='bold'>Figyelem: A \"Thus\" telepítő béta szoftver.</span>\n\nThe szoftvare \"Thus\" béta állapotú és jelenleg is fejlesztés alatt áll.\nMég nem tökéletesen kezeli a RAID, btrfs köteteket vagy egyéb haladó beállításokat. Kérem körültekintően járjon el mivel adatvesztés lehetséges!\n\nHa bármilyen hibát észlel itt jelentheti: <a href='http://bugs.manjaro.org'>http://bugs.manjaro.org</a>"
 
 #: ui/thus.ui:37
-msgid "<span weight=\"bold\" size=\"large\">Welcome to Manjaro</span>"
-msgstr "<span weight=\"bold\" size=\"large\">Üdvözli a Manjaro</span>"
+msgid "<span weight=\"bold\" size=\"large\">Welcome to Netrunner</span>"
+msgstr "<span weight=\"bold\" size=\"large\">Üdvözli a Netrunner</span>"
 
 #: ui/user_info.ui:119 ui/user_info.ui:589
 msgid "<small><span color=\"darkgreen\">Strong password</span></small>"

@@ -6,6 +6,7 @@
 #  This file was forked from Thus (graphical installer from Antergos)
 #  Check it at https://github.com/antergos
 #
+#  Copyright 2014 Netrunner (http://netrunner-os.com)
 #  Copyright 2013 Antergos (http://antergos.com/)
 #  Copyright 2013 Manjaro (http://manjaro.org)
 #
@@ -49,33 +50,33 @@ def setup(username, dest_dir):
 
     with open(name, "w") as pam_encfs:
         pam_encfs.write(lines)
-        pam_encfs.write("# Added by Thus - Manjaro Installer\n")
+        pam_encfs.write("# Added by Thus - Netrunner Installer\n")
         pam_encfs.write("-\t/home/.encfs\t-\t-v\t-\n")
 
     name = os.path.join(dest_dir, "etc/security/pam_env.conf")
     shutil.copy(name, name + ".thus")
     with open(name, "a") as pam_env:
-        pam_env.write("# Added by Thus - Manjaro Installer\n")
+        pam_env.write("# Added by Thus - Netrunner Installer\n")
         pam_env.write("# Set the ICEAUTHORITY file location to allow GNOME to start on encfs $HOME\n")
         pam_env.write("ICEAUTHORITY DEFAULT=/tmp/.ICEauthority_@{PAM_USER}\n")
 
     name = os.path.join(dest_dir, "etc/fuse.conf")
     shutil.copy(name, name + ".thus")
     with open(name, "a") as fuse_conf:
-        fuse_conf.write("# Added by Thus - Manjaro Installer\n")
+        fuse_conf.write("# Added by Thus - Netrunner Installer\n")
         fuse_conf.write("user_allow_other\n")
 
     name = os.path.join(dest_dir, "etc/pam.d/system-login")
     shutil.copy(name, name + ".thus")
     with open(name, "a") as system_login:
-        system_login.write("# Added by Thus - Manjaro Installer\n")
+        system_login.write("# Added by Thus - Netrunner Installer\n")
         system_login.write("session required\tpam_encfs.so\n")
         system_login.write("session optional\tpam_mount.so\n")
 
     name = os.path.join(dest_dir, "etc/pam.d/system-auth")
     shutil.copy(name, name + ".thus")
     with open(name, "a") as system_auth:
-        system_auth.write("# Added by Thus - Manjaro Installer\n")
+        system_auth.write("# Added by Thus - Netrunner Installer\n")
         system_auth.write("auth sufficient\tpam_encfs.so\n")
         system_auth.write("auth optional\tpam_mount.so\n")
 

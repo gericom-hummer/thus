@@ -6,6 +6,7 @@
 #  This file was forked from Cnchi (graphical installer from Antergos)
 #  Check it at https://github.com/antergos
 #
+#  Copyright 2014 Netrunner (http://netrunner-os.com)
 #  Copyright 2013 Antergos (http://antergos.com/)
 #  Copyright 2013 Manjaro (http://manjaro.org)
 #
@@ -85,7 +86,7 @@ class InstallationAutomatic(Gtk.Box):
         label.set_markup(txt)
 
         label = self.ui.get_object('text_automatic2')
-        txt = _("Please choose the drive where you want to install Manjaro\nand click the button below to start the process.")
+        txt = _("Please choose the drive where you want to install Netrunner\nand click the button below to start the process.")
         txt = "%s" % txt
         label.set_markup(txt)
 

@@ -51,7 +51,7 @@ def error(message):
         Gtk.DialogFlags.MODAL,
         Gtk.MessageType.ERROR,
         Gtk.ButtonsType.CLOSE,
-        _("Manjaro Installer - Error"))
+        _("Netrunner Installer - Error"))
     msg_dialog.format_secondary_text(message)
     msg_dialog.run()
     msg_dialog.destroy()
@@ -63,7 +63,7 @@ def warning(message):
         Gtk.DialogFlags.MODAL,
         Gtk.MessageType.WARNING,
         Gtk.ButtonsType.CLOSE,
-        _("Manjaro Installer - Warning"))
+        _("Netrunner Installer - Warning"))
     msg_dialog.format_secondary_text(message)
     msg_dialog.run()
     msg_dialog.destroy()
@@ -75,7 +75,7 @@ def message(message):
         Gtk.DialogFlags.MODAL,
         Gtk.MessageType.INFO,
         Gtk.ButtonsType.CLOSE,
-        _("Manjaro Installer - Information"))
+        _("Netrunner Installer - Information"))
     msg_dialog.format_secondary_text(message)
     msg_dialog.run()
 
@@ -86,7 +86,7 @@ def question(message):
         Gtk.DialogFlags.MODAL,
         Gtk.MessageType.QUESTION,
         Gtk.ButtonsType.YES_NO,
-        _("Manjaro Installer - Question"))
+        _("Netrunner Installer - Question"))
     msg_dialog.format_secondary_text(message)
     response = msg_dialog.run()
     msg_dialog.destroy()

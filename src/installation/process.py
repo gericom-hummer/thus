@@ -6,6 +6,7 @@
 #  This file was forked from Cnchi (graphical installer from Antergos)
 #  Check it at https://github.com/antergos
 #
+#  Copyright 2014 Netrunner (http://netrunner-os.com)
 #  Copyright 2013 Antergos (http://antergos.com/)
 #  Copyright 2013 Manjaro (http://manjaro.org)
 #
@@ -742,13 +743,13 @@ class InstallationProcess(multiprocessing.Process):
                     home_keyfile = "/etc/luks-keys/.keyfile-home"
                 subprocess.check_call(['chmod', '0777', '%s/etc/crypttab' % self.dest_dir])
                 with open('%s/etc/crypttab' % self.dest_dir, 'a') as crypttab_file:
-                    line = "cryptManjaroHome /dev/disk/by-uuid/%s %s luks\n" % (uuid, home_keyfile)
+                    line = "cryptNetrunnerHome /dev/disk/by-uuid/%s %s luks\n" % (uuid, home_keyfile)
                     crypttab_file.write(line)
                     logging.debug(_("Added to crypttab : %s"), line)
                 subprocess.check_call(['chmod', '0600', '%s/etc/crypttab' % self.dest_dir])
 
-                all_lines.append("/dev/mapper/cryptManjaroHome %s %s %s 0 %s" % (path, myfmt, opts, chk))
-                logging.debug(_("Added to fstab : /dev/mapper/cryptManjaroHome %s %s %s 0 %s"), path, myfmt, opts, chk)
+                all_lines.append("/dev/mapper/cryptNetrunnerHome %s %s %s 0 %s" % (path, myfmt, opts, chk))
+                logging.debug(_("Added to fstab : /dev/mapper/cryptNetrunnerHome %s %s %s 0 %s"), path, myfmt, opts, chk)
                 continue
 
             # fstab uses vfat to mount fat16 and fat32 partitions
@@ -835,9 +836,9 @@ class InstallationProcess(multiprocessing.Process):
 
             # Let GRUB automatically add the kernel parameters for root encryption
             if self.settings.get("luks_key_pass") == "":
-                default_line = 'GRUB_CMDLINE_LINUX="cryptdevice=/dev/disk/by-uuid/%s:cryptManjaro cryptkey=/dev/disk/by-uuid/%s:ext2:/.keyfile-root"' % (root_uuid, boot_uuid)
+                default_line = 'GRUB_CMDLINE_LINUX="cryptdevice=/dev/disk/by-uuid/%s:cryptNetrunner cryptkey=/dev/disk/by-uuid/%s:ext2:/.keyfile-root"' % (root_uuid, boot_uuid)
             else:
-                default_line = 'GRUB_CMDLINE_LINUX="cryptdevice=/dev/disk/by-uuid/%s:cryptManjaro"' % root_uuid
+                default_line = 'GRUB_CMDLINE_LINUX="cryptdevice=/dev/disk/by-uuid/%s:cryptNetrunner"' % root_uuid
 
             with open(default_grub, 'r') as grub_file:
                 lines = [x.strip() for x in grub_file.readlines()]
@@ -851,7 +852,7 @@ class InstallationProcess(multiprocessing.Process):
                         lines[i].startswith("GRUB_CMDLINE_LINUX_DEFAULT"):
                     lines[i] = kernel_cmd
                 elif lines[i].startswith("#GRUB_DISTRIBUTOR") or lines[i].startswith("GRUB_DISTRIBUTOR"):
-                    lines[i] = "GRUB_DISTRIBUTOR=Manjaro"
+                    lines[i] = "GRUB_DISTRIBUTOR=Netrunner"
 
             with open(default_grub, 'w') as grub_file:
                 grub_file.write("\n".join(lines) + "\n")
@@ -865,7 +866,7 @@ class InstallationProcess(multiprocessing.Process):
                 elif lines[i].startswith("GRUB_CMDLINE_LINUX_DEFAULT"):
                     lines[i] = kernel_cmd
                 elif lines[i].startswith("#GRUB_DISTRIBUTOR") or lines[i].startswith("GRUB_DISTRIBUTOR"):
-                    lines[i] = "GRUB_DISTRIBUTOR=Manjaro"
+                    lines[i] = "GRUB_DISTRIBUTOR=Netrunner"
 
             with open(default_grub, 'w') as grub_file:
                 grub_file.write("\n".join(lines) + "\n")
@@ -951,6 +952,7 @@ class InstallationProcess(multiprocessing.Process):
         self.queue_event('info', _("Installing GRUB(2) UEFI %s boot loader") % uefi_arch)
         efi_path = self.settings.get('bootloader_location')
         try:
+            # Do not replace bootloader-id as we are using manjaro directory for UEFI
             subprocess.check_call(['grub-install --target=%s-efi --efi-directory=/install%s '
                                    '--bootloader-id=manjaro --boot-directory=/install/boot '
                                    '--recheck --debug' % (uefi_arch, efi_path)], shell=True, timeout=45)

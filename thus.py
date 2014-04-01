@@ -3,6 +3,7 @@
 #
 #  thus.py
 #
+#  Copyright 2014 Netrunner
 #  Copyright 2013 Antergos, Manjaro
 #
 #  This program is free software; you can redistribute it and/or modify
@@ -231,7 +232,7 @@ class Main(Gtk.Window):
         self.connect("delete-event", Gtk.main_quit)
         self.ui.connect_signals(self)
 
-        self.set_title(_('Manjaro Installer'))
+        self.set_title(_('Netrunner Installer'))
         self.set_position(Gtk.WindowPosition.CENTER)
         self.set_resizable(False)
         self.set_size_request(MAIN_WINDOW_WIDTH, MAIN_WINDOW_HEIGHT)
@@ -407,7 +408,7 @@ def parse_options():
     """ argparse http://docs.python.org/3/howto/argparse.html """
 
     import argparse
-    parser = argparse.ArgumentParser(description="Thus v%s - Manjaro Installer" % info.THUS_VERSION)
+    parser = argparse.ArgumentParser(description="Thus v%s - Netrunner Installer" % info.THUS_VERSION)
     parser.add_argument("-d", "--debug", help=_("Sets Thus log level to 'debug'"), action="store_true")
     parser.add_argument("-u", "--update", help=_("Update Thus to the latest version (-uu will force the update)"), action="count")
     parser.add_argument("-t", "--testing", help=_("Do not perform any changes (useful for developers)"), action="store_true")
