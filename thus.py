@@ -85,7 +85,7 @@ from installation import advanced as installation_advanced
 cmd_line = None
 
 # Constants (must be uppercase)
-MAIN_WINDOW_WIDTH = 800
+MAIN_WINDOW_WIDTH = 900
 MAIN_WINDOW_HEIGHT = 526
 
 # At least this GTK version is needed
