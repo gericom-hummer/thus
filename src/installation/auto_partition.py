@@ -379,7 +379,8 @@ class AutoPartition(object):
         else:
             gpt_bios_grub_part_size = 0
             efisys_part_size = 0
-            empty_space_size = 0
+            # we start with a 1MB offset before the first partition
+            empty_space_size = 1
 
         boot_part_size = 0
         if self.separate_boot:
