@@ -139,8 +139,14 @@ class AutoPartition(object):
         if os.path.exists("/sys/firmware/efi"):
             self.efi = True
 
+        self.separate_boot = use_luks or use_lvm or self.efi
+        logging.debug( "luks is " + str(use_luks) + ", lvm is " + str(use_lvm) \
+                       + " and efi is " + str(self.efi) \
+                       + "\ntherefore separate_boot is " + str(self.separate_boot))
+
     def mkfs(self, device, fs_type, mount_point, label_name, fs_options="", btrfs_devices=""):
         """ We have two main cases: "swap" and everything else. """
+        logging.debug("Will mkfs " + device + " as " + fs_type)
         if fs_type == "swap":
             try:
                 swap_devices = check_output("swapon -s")
@@ -164,7 +170,7 @@ class AutoPartition(object):
 
             # Make sure the fs type is one we can handle
             if fs_type not in mkfs.keys():
-                txt = _("Unkown filesystem type %s"), fs_type
+                txt = _("Unknown filesystem type %s"), fs_type
                 logging.error(txt)
                 show.error(txt)
                 return
@@ -189,7 +195,12 @@ class AutoPartition(object):
             subprocess.check_call(["mkdir", "-p", path])
 
             # Mount our new filesystem
-            subprocess.check_call(["mount", "-t", fs_type, device, path])
+            mopts = "rw,relatime,data=ordered"
+            if fs_type == "btrfs":
+                opts = 'rw,relatime,space_cache,autodefrag,inode_cache'
+            subprocess.check_call(["mount", "-t", fs_type, "-o", mopts, device, path])
+
+            logging.debug("AutoPartition done, filesystems mounted:\n" + subprocess.check_output(["mount"]).decode())
 
             # Change permission of base directories to avoid btrfs issues
             mode = "755"
@@ -225,12 +236,19 @@ class AutoPartition(object):
             root = self.auto_device + "5"
             if self.home:
                 home = self.auto_device + "6"
-        else:
+        elif self.luks or self.lvm:
             boot = self.auto_device + "1"
             swap = self.auto_device + "2"
             root = self.auto_device + "3"
             if self.home:
                 home = self.auto_device + "4"
+        else:
+            # self.separate_boot must be false
+            boot = ""
+            swap = self.auto_device + "1"
+            root = self.auto_device + "2"
+            if self.home:
+                home = self.auto_device + "3"
 
         if self.luks:
             if self.lvm:
@@ -264,7 +282,8 @@ class AutoPartition(object):
         (efi_device, boot_device, swap_device, root_device, luks_devices, lvm_device, home_device) = self.get_devices()
 
         mount_devices = {}
-        mount_devices["/boot"] = boot_device
+        if self.separate_boot:
+            mount_devices["/boot"] = boot_device
         mount_devices["/"] = root_device
         mount_devices["/home"] = home_device
 
@@ -290,7 +309,8 @@ class AutoPartition(object):
 
         fs_devices = {}
 
-        fs_devices[boot_device] = "ext2"
+        if self.separate_boot:
+            fs_devices[boot_device] = "ext2"
         fs_devices[swap_device] = "swap"
 
         if self.efi:
@@ -361,7 +381,9 @@ class AutoPartition(object):
             efisys_part_size = 0
             empty_space_size = 0
 
-        boot_part_size = 200
+        boot_part_size = 0
+        if self.separate_boot:
+            boot_part_size = 200
 
         # Get just the disk size in 1000*1000 MB
         device = self.auto_device
@@ -479,13 +501,17 @@ class AutoPartition(object):
             # Create DOS MBR with parted
             subprocess.check_call(["parted", "-a", "optimal", "-s", device, "mktable", "msdos"])
 
-            # Create boot partition (all sizes are in MB)
-            subprocess.check_call(["parted", "-a", "optimal", "-s", device, "mkpart", "primary", "1", str(boot_part_size)])
-            # Set boot partition as bootable
-            subprocess.check_call(["parted", "-a", "optimal", "-s", device, "set", "1", "boot", "on"])
+            if self.separate_boot:
+                # Create boot partition (all sizes are in MB)
+                subprocess.check_call(["parted", "-a", "optimal", "-s", device, "mkpart", "primary", "1", str(boot_part_size)])
+                # Set boot partition as bootable
+                subprocess.check_call(["parted", "-a", "optimal", "-s", device, "set", "1", "boot", "on"])
 
             if self.lvm:
                 start = boot_part_size
+                if boot_part_size is 0:
+                    start = 1
+
                 end = start + lvm_pv_part_size
                 # Create partition for lvm (will store root, swap and home (if desired) logical volumes)
                 subprocess.check_call(["parted", "-a", "optimal", "-s", device, "mkpart", "primary", str(start), "100%"])
@@ -494,6 +520,8 @@ class AutoPartition(object):
             else:
                 # Create swap partition
                 start = boot_part_size
+                if boot_part_size is 0:
+                    start = 1
                 end = start + swap_part_size
                 subprocess.check_call(["parted", "-a", "optimal", "-s", device, "mkpart", "primary", "linux-swap",
                     str(start), str(end)])
@@ -550,7 +578,9 @@ class AutoPartition(object):
         # Make sure the "root" partition is defined first!
         self.mkfs(root_device, "ext4", "/", "NetrunnerRoot")
         self.mkfs(swap_device, "swap", "", "NetrunnerSwap")
-        self.mkfs(boot_device, "ext2", "/boot", "NetrunnerBoot")
+        if self.separate_boot:
+            logging.debug("Boot device is " + boot_device + ", about to mkfs")
+            self.mkfs(boot_device, "ext2", "/boot", "NetrunnerBoot")
 
         # Format the EFI partition
         if self.efi:
