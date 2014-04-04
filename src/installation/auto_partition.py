@@ -59,7 +59,7 @@ def printk(enable):
 def unmount_all(dest_dir):
     """ Unmounts all devices that are mounted inside dest_dir """
     swaps = subprocess.check_output(["swapon", "--show=NAME", "--noheadings"]).decode().split("\n")
-    for name in swaps:
+    for name in filter(None, swaps):
         if "/dev/zram" not in name:
             subprocess.check_call(["swapoff", name])
 

@@ -1707,7 +1707,7 @@ class InstallationAdvanced(Gtk.Box):
         """ Create staged partitions """
         # Sometimes a swap partition can still be active at this point
         swaps = subprocess.check_output(["swapon", "--show=NAME", "--noheadings"]).decode().split("\n")
-        for name in swaps:
+        for name in filter(None, swaps):
             if "/dev/zram" not in name:
                 subp = subprocess.Popen(['sh', '-c', 'swapoff %s' % name], stdout=subprocess.PIPE)
 
