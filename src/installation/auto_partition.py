@@ -36,7 +36,7 @@ import parted3.used_space as used_space
 
 """ AutoPartition class """
 
-# Partition sizes are in MB
+# Partition sizes are in MiB
 MAX_ROOT_SIZE = 30000
 
 # TODO: This higly depends on the selected DE! Must be taken into account.
@@ -198,9 +198,12 @@ class AutoPartition(object):
             subprocess.check_call(["mkdir", "-p", path])
 
             # Mount our new filesystem
-            mopts = "rw,relatime,data=ordered"
-            if fs_type == "btrfs":
-                opts = 'rw,relatime,space_cache,autodefrag,inode_cache'
+
+            mopts = "rw,relatime"
+            if fs_type == "ext4":
+                mopts = "rw,relatime,data=ordered"
+            elif fs_type == "btrfs":
+                mopts = 'rw,relatime,space_cache,autodefrag,inode_cache'
             subprocess.check_call(["mount", "-t", fs_type, "-o", mopts, device, path])
 
             logging.debug("AutoPartition done, filesystems mounted:\n" + subprocess.check_output(["mount"]).decode())
@@ -349,8 +352,8 @@ class AutoPartition(object):
         logging.debug(_("Thus will setup LUKS on device %s"), luks_device)
 
         # Wipe LUKS header (just in case we're installing on a pre LUKS setup)
-        # For 512 bit key length the header is 2MB
-        # If in doubt, just be generous and overwrite the first 10MB or so
+        # For 512 bit key length the header is 2MiB
+        # If in doubt, just be generous and overwrite the first 10MiB or so
         subprocess.check_call(["dd", "if=/dev/zero", "of=%s" % luks_device, "bs=512", "count=20480", "status=noxfer"])
 
         if self.luks_key_pass == "":
@@ -377,7 +380,7 @@ class AutoPartition(object):
     def run(self):
         key_files = ["/tmp/.keyfile-root", "/tmp/.keyfile-home"]
 
-        # Partition sizes are expressed in MB
+        # Partition sizes are expressed in MiB
         if self.efi:
             gpt_bios_grub_part_size = 2
             efisys_part_size = 100
@@ -385,14 +388,14 @@ class AutoPartition(object):
         else:
             gpt_bios_grub_part_size = 0
             efisys_part_size = 0
-            # we start with a 1MB offset before the first partition
+            # we start with a 1MiB offset before the first partition
             empty_space_size = 1
 
         boot_part_size = 0
         if self.separate_boot:
             boot_part_size = 200
 
-        # Get just the disk size in 1000*1000 MB
+        # Get just the disk size in MiB
         device = self.auto_device
         device_name = check_output("basename %s" % device)
         base_path = "/sys/block/%s" % device_name
@@ -445,24 +448,28 @@ class AutoPartition(object):
 
         lvm_pv_part_size = swap_part_size + root_part_size + home_part_size
 
-        logging.debug("disk_size %dMB", disk_size)
-        logging.debug("gpt_bios_grub_part_size %dMB", gpt_bios_grub_part_size)
-        logging.debug("efisys_part_size %dMB", efisys_part_size)
-        logging.debug("boot_part_size %dMB", boot_part_size)
+        logging.debug("disk_size %dMiB", disk_size)
+        logging.debug("gpt_bios_grub_part_size %dMiB", gpt_bios_grub_part_size)
+        logging.debug("efisys_part_size %dMiB", efisys_part_size)
+        logging.debug("boot_part_size %dMiB", boot_part_size)
 
         if self.lvm:
-            logging.debug("lvm_pv_part_size %dMB", lvm_pv_part_size)
+            logging.debug("lvm_pv_part_size %dMiB", lvm_pv_part_size)
 
-        logging.debug("swap_part_size %dMB", swap_part_size)
-        logging.debug("root_part_size %dMB", root_part_size)
+        logging.debug("swap_part_size %dMiB", swap_part_size)
+        logging.debug("root_part_size %dMiB", root_part_size)
 
         if self.home:
-            logging.debug("home_part_size %dMB", home_part_size)
+            logging.debug("home_part_size %dMiB", home_part_size)
 
         # Disable swap and all mounted partitions, umount / last!
         unmount_all(self.dest_dir)
 
         printk(False)
+
+        #WARNING: Our computed sizes are all in mebibytes (MiB) i.e. powers of 1024, not metric megabytes.
+        #         These are 'M' in sgdisk and 'MiB' in parted. If you use 'M' in parted you'll get MB instead of MiB,
+        #         and you're gonna have a bad time.
 
         # We assume a /dev/hdX format (or /dev/sdX)
         if self.efi:
@@ -489,14 +496,17 @@ class AutoPartition(object):
                 subprocess.check_call(['sgdisk --set-alignment="2048" --new=4:0:+%dM --typecode=4:8E00 --change-name=4:NETRUNNER_LVM %s'
                     % (lvm_pv_part_size, device)], shell=True)
             else:
-                subprocess.check_call(['sgdisk --set-alignment="2048" --new=5:0:+%dM --typecode=5:8300 --change-name=5:NETRUNNER_ROOT %s'
+                subprocess.check_call(['sgdisk --set-alignment="2048" --new=4:0:+%dM --typecode=4:8300 --change-name=4:NETRUNNER_ROOT %s'
                     % (root_part_size, device)], shell=True)
 
                 if self.home:
-                    subprocess.check_call(['sgdisk --set-alignment="2048" --new=6:0:+%dM --typecode=6:8300 --change-name=5:NETRUNNER_HOME %s'
+                    subprocess.check_call(['sgdisk --set-alignment="2048" --new=5:0:+%dM --typecode=5:8300 --change-name=5:NETRUNNER_HOME %s'
                         % (home_part_size, device)], shell=True)
 
-                subprocess.check_call(['sgdisk --set-alignment="2048" --new=4:0:+%dM --typecode=4:8200 --change-name=4:NETRUNNER_SWAP %s'
+                    subprocess.check_call(['sgdisk --set-alignment="2048" --new=6:0:+%dM --typecode=6:8200 --change-name=6:NETRUNNER_SWAP %s'
+                    % (swap_part_size, device)], shell=True)
+
+                subprocess.check_call(['sgdisk --set-alignment="2048" --new=5:0:+%dM --typecode=5:8200 --change-name=5:NETRUNNER_SWAP %s'
                     % (swap_part_size, device)], shell=True)
 
             logging.debug(check_output("sgdisk --print %s" % device))
@@ -511,8 +521,8 @@ class AutoPartition(object):
             subprocess.check_call(["parted", "-a", "optimal", "-s", device, "mktable", "msdos"])
 
             if self.separate_boot:
-                # Create boot partition (all sizes are in MB)
-                subprocess.check_call(["parted", "-a", "optimal", "-s", device, "mkpart", "primary", "1", str(boot_part_size)])
+                # Create boot partition (all sizes are in MiB)
+                subprocess.check_call(["parted", "-a", "optimal", "-s", device, "mkpart", "primary", "1", "%dMiB" % boot_part_size])
                 # Set boot partition as bootable
                 subprocess.check_call(["parted", "-a", "optimal", "-s", device, "set", "1", "boot", "on"])
 
@@ -523,7 +533,7 @@ class AutoPartition(object):
 
                 end = start + lvm_pv_part_size
                 # Create partition for lvm (will store root, swap and home (if desired) logical volumes)
-                subprocess.check_call(["parted", "-a", "optimal", "-s", device, "mkpart", "primary", str(start), "100%"])
+                subprocess.check_call(["parted", "-a", "optimal", "-s", device, "mkpart", "primary", "%dMiB" % start, "100%"])
                 # Set lvm flag
                 subprocess.check_call(["parted", "-a", "optimal", "-s", device, "set", "2", "lvm", "on"])
             else:
@@ -534,19 +544,24 @@ class AutoPartition(object):
                 # Create root partition
                 end = start + root_part_size
                 subprocess.check_call(["parted", "-a", "optimal", "-s", device, "mkpart", "primary",
-                    str(start), str(end)])
+                    "%dMiB" % start, "%dMiB" % end])
+
+                if not self.separate_boot:
+                    # Set this partition as bootable
+                    subprocess.check_call(["parted", "-a", "optimal", "-s", device, "set", "1", "boot", "on"])
+
 
                 if self.home:
                     # Create home partition
                     start = end
                     end = start + home_part_size
                     subprocess.check_call(["parted", "-a", "optimal", "-s", device, "mkpart", "primary",
-                        str(start), str(end)])
+                        "%dMiB" % start, "%dMiB" % end])
 
                 # Create swap partition
                 start = end
                 subprocess.check_call(["parted", "-a", "optimal", "-s", device, "mkpart", "primary", "linux-swap",
-                    str(start), "100%"])
+                    "%dMiB" % start, "100%"])
 
         printk(True)
 

@@ -760,9 +760,12 @@ class InstallationProcess(multiprocessing.Process):
                 if "btrfs" in myfmt:
                     chk = '0'
                     opts = 'rw,relatime,space_cache,autodefrag,inode_cache'
-                else:
+                elif "ext4" in myfmt:
                     chk = '1'
                     opts = "rw,relatime,data=ordered"
+                else:
+                    chk = '1'
+                    opts = "rw,relatime"
             else:
                 full_path = os.path.join(self.dest_dir, path)
                 subprocess.check_call(["mkdir", "-p", full_path])
