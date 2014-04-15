@@ -340,6 +340,18 @@ class InstallationProcess(multiprocessing.Process):
                         logging.warning(cmd)
                         out = _("Output : %s") % err.output
                         logging.warning(out)
+                elif mount_part == swap_partition:
+                    try:
+                        txt = _("Mounting swap %s") % mount_part
+                        self.queue_event('debug', txt)
+                        subprocess.check_call(['swapon', swap_partition])
+                    except subprocess.CalledProcessError as err:
+                        txt = _("Can't mount %s") % mount_part
+                        self.queue_event('warning', txt)
+                        cmd = _("Command %s has failed.") % err.cmd
+                        logging.warning(cmd)
+                        out = _("Output : %s") % err.output
+                        logging.warning(out)
 
         # Nasty workaround:
         # If pacman was stoped and /var is in another partition than root
