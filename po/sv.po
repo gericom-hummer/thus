@@ -698,7 +698,6 @@ msgstr "Netrunner kommer att använda %s som installationsmedia"
 
 #: src/installation/process.py:89
 #, python-format
-msgstr "Netrunner kommer att installera bootloadern, av typen %s, på %s"
 msgid "Copying '/%s'"
 msgstr "Kopierar '/%s'"
 
