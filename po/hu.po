@@ -692,7 +692,6 @@ msgstr "Thus használni fogja a következő telepítési eszközt: %s"
 
 #: src/installation/process.py:89
 #, python-format
-msgstr "Netrunner telepíteni fogja a rendszerbetöltőt a %s - %s"
 msgid "Copying '/%s'"
 msgstr "Másolás '/%s'"
 
