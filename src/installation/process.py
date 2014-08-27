@@ -948,7 +948,7 @@ class InstallationProcess(multiprocessing.Process):
         self.chroot_umount_special_dirs()
 
         cfg = os.path.join(self.dest_dir, "boot/grub/grub.cfg")
-        if "Manjaro" in open(cfg).read():
+        if "Netrunner" in open(cfg).read():
             self.queue_event('info', _("GRUB(2) BIOS has been successfully installed."))
             self.settings.set('bootloader_ok', True)
         else:
@@ -1037,7 +1037,7 @@ class InstallationProcess(multiprocessing.Process):
         self.chroot_umount_special_dirs()
 
         cfg = os.path.join(self.dest_dir, "boot/grub/grub.cfg")
-        if "Manjaro" in open(cfg).read():
+        if "Netrunner" in open(cfg).read():
             self.queue_event('info', _("GRUB(2) UEFI has been successfully installed."))
             self.settings.set('bootloader_ok', True)
         else:
