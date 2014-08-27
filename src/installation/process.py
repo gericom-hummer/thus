@@ -1351,7 +1351,7 @@ class InstallationProcess(multiprocessing.Process):
 
         # Set timezone
         zoneinfo_path = os.path.join("/usr/share/zoneinfo", self.settings.get("timezone_zone"))
-        self.chroot(['ln', '-s', zoneinfo_path, "/etc/localtime"])
+        self.chroot(['ln', '-sf', zoneinfo_path, "/etc/localtime"])
 
         self.queue_event('debug', _('Time zone set.'))
 
